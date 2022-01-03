@@ -1,0 +1,32 @@
+.OpenSourceContainer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    opacity: 0.9;
+}
+
+.OpenSourceContent{
+    position: static;
+    color: white;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.OpenSourceLink{
+    text-decoration: none;
+    opacity: 1;
+    color: yellow;
+}
+
+.OpenSourceLink:hover{
+    color: black;
+    background-color: yellow;
+    transition: 0.5s all;
+}
+
+@media (max-width: 900px) {
+    .OpenSourceContent{
+        font-size: 10px;
+    }
+}
