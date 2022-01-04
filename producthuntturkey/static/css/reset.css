@@ -10,6 +10,8 @@
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    background-color: #F5F5F5;
+    font-family: 'Nunito', sans-serif;
   }
   img, picture, video, canvas, svg {
     display: block;
