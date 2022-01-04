@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="{% static 'css/github.css' %}">
     <title>Product Hunt Turkey</title>
 </head>
-{% include 'partials/_github.html' %}
-{% include 'partials/_navbar.html' %}
-
 <body>
+    {% include 'partials/_github.html' %}
+    {% include 'partials/_navbar.html' %}
     {% block content %}
     {% endblock content %}
 </body>
