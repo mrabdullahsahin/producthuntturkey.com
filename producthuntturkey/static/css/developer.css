@@ -1,0 +1,22 @@
+.developer{
+    position: fixed;
+    bottom: 0;
+    width: 150px;
+    text-align: center;
+    background-color: black;
+    padding: 5px;
+    border-top-left-radius: .2em;
+    right: 0;
+}
+
+.developer:hover{
+    background-color: black;
+    opacity: .8;
+    color: white;
+    text-decoration: none;
+}
+
+.navigation{
+    text-decoration: none;
+    color: white;
+}
