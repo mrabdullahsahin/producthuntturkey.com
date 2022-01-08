@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import City, TeamSize
+from . models import City, TeamSize, Product
 
 @admin.register(City)
 class CityAdmin(admin.ModelAdmin):
@@ -8,3 +8,8 @@ class CityAdmin(admin.ModelAdmin):
 @admin.register(TeamSize)
 class TeamSize(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('size',)}
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_filter = ('is_avaliable','product_city')
+    search_fields = ('product_name','product_description')
