@@ -11,5 +11,5 @@ class TeamSize(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_filter = ('is_avaliable','product_city')
+    list_filter = ('is_avaliable','product_city','product_team_size')
     search_fields = ('product_name','product_description')
