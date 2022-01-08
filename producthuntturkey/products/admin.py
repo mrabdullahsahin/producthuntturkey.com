@@ -13,3 +13,4 @@ class TeamSize(admin.ModelAdmin):
 class ProductAdmin(admin.ModelAdmin):
     list_filter = ('is_avaliable','product_city','product_team_size')
     search_fields = ('product_name','product_description')
+    prepopulated_fields = {'slug': ('product_name',)}
