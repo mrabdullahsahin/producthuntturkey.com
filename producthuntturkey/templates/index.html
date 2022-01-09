@@ -3,8 +3,10 @@
 
 {% block content %}
 <div class="product-section">
-    {% for product in products %}
-    <time class="time">{{product.product_launch_date}}</time>
+    {% regroup products by product_launch_date as products_list %}
+    {% for products in products_list %}
+    <time class="time">{{products.grouper}}</time>
+    {% for product in products.list %}
     <section class="startup-list">
         <article class="list-data">
             <figure>
@@ -21,6 +23,7 @@
             </a>
         </article>
     </section>
+    {% endfor %}
     {% endfor %}
 </div>
 {% endblock content %}
