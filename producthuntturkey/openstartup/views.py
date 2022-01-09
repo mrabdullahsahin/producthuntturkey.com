@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def openpage(request):
+    return render(request, 'open-startup.html')
