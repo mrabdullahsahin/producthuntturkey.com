@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'products.apps.ProductsConfig',
     'openstartup.apps.OpenstartupConfig',
+    'addyourstartup.apps.AddyourstartupConfig',
 ]
 
 MIDDLEWARE = [
