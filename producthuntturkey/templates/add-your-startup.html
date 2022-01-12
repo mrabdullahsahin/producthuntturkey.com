@@ -1,2 +1,40 @@
 {% extends 'partials/_base.html' %}
 {% load static %}
+
+{% block content %}
+<div class="container">
+    <form action="#">
+        <div class="row">
+            <div>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+{% endblock content %}
