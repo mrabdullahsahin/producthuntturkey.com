@@ -23,3 +23,7 @@ class AddYourStartupArea(models.Model):
 
     def __str__(self):
         return self.product_name
+
+    def save(self, *args, **kwargs):
+        self.slug = self.slug or slugify(self.product_name)
+        super().save(*args, **kwargs)
