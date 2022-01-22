@@ -5,12 +5,14 @@ from django.http import HttpResponse
 from .forms import AddYourStartupForm
 
 def addyourstartup(request):
-    #return render(request, 'add-your-startup.html')
+    form = AddYourStartupForm()
+
     if request.method == "POST":
-        form = AddYourStartupForm(request.POST)
-        form.save()
-        messages.success(request, "Your product was successfully submitted!")
-        return redirect('add-your-startup')
+        if form.is_valid():
+            form = AddYourStartupForm(request.POST, request.FILES)
+            form.save()
+            messages.success(request, "Your product was successfully submitted!")
+            return redirect('add-your-startup')
 
     context = {
         'form': form
