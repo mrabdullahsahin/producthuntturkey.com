@@ -3,61 +3,81 @@
 
 {% block content %}
 <div class="container">
-    <form action="#">
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}}">
+        {{message}}
+    </div>
+    {% endfor %}
+    {% endif %}
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
         <div class="row">
             <div>
                 <label for="fname">Product Name</label>
-                <input type="text" id="fname" name="product_name" placeholder="Your name..">
+                {{form.product_name}}
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <label for="lname">Product Picture</label>
+                <br>
+                {{form.product_picture}}
             </div>
         </div>
         <div class="row">
             <div>
                 <label for="lname">Product Hunt Link</label>
-                <input type="text" id="lname" name="ph_link" placeholder="Your last name..">
+                {{form.product_ph_link}}
             </div>
         </div>
         <div class="row">
             <div>
                 <label for="lname">Product Website</label>
-                <input type="text" id="lname" name="website" placeholder="Your last name..">
+                {{form.product_website}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label for="lname">Product Lauch Date/label>
-                <input type="text" id="lname" name="website" placeholder="Your last name..">
+                <label for="lname">Product Lauch Date</label>
+                <br>
+                {{form.product_launch_date}}
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <label for="fname">Product Twitter Username</label>
+                {{form.product_twitter}}
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <label for="fname">Product Owner Username</label>
+                {{form.product_owner_twitter}}
             </div>
         </div>
         <div class="row">
             <div>
                 <label for="country">Product Team Sizes</label>
-                <select id="country" name="country">
-                    <option value="australia">Australia</option>
-                    <option value="canada">Canada</option>
-                    <option value="usa">USA</option>
-                </select>
+                {{form.product_team_size}}
             </div>
         </div>
         <div class="row">
             <div>
                 <label for="country">Country</label>
-                <select id="country" name="country">
-                    <option value="australia">Australia</option>
-                    <option value="canada">Canada</option>
-                    <option value="usa">USA</option>
-                </select>
+                {{form.product_city}}
             </div>
         </div>
         <div class="row">
             <div>
                 <label for="subject">Product Turkish Description</label>
-                <textarea id="subject" name="tr_description" style="height:200px"></textarea>
+                {{form.product_about_tr}}
             </div>
         </div>
         <div class="row">
             <div>
                 <label for="subject">Product English Description</label>
-                <textarea id="subject" name="en_description" style="height:200px"></textarea>
+                {{form.product_about_en}}
             </div>
         </div>
         <div class="row">
