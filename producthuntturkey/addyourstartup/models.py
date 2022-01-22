@@ -14,7 +14,7 @@ class AddYourStartupArea(models.Model):
     product_owner_twitter = models.CharField(max_length=250, null=True, blank=True)
     product_ph_link = models.CharField(max_length=250, null=True, blank=True)
     product_website = models.CharField(max_length=250, null=True, blank=True)
-    product_launch_date = models.DateField(auto_now=True, null=True, blank=True)
+    product_launch_date = models.DateField(null=True, blank=True)
     product_team_size = models.ForeignKey(TeamSize, on_delete=models.DO_NOTHING, null=True, blank=True)
     product_picture = models.ImageField(upload_to=get_filepath, default="default/producthuntturkey-logo.png", null=True, blank=True)
     product_city = models.ForeignKey(City, on_delete=models.DO_NOTHING, null=True, blank=True)
