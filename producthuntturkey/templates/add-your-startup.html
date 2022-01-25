@@ -10,73 +10,73 @@
     </div>
     {% endfor %}
     {% endif %}
-    <form method="POST" enctype="multipart/form-data">
+    <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="row">
             <div>
-                <label for="fname">Product Name</label>
+                <label>Product Name</label>
                 {{form.product_name}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label for="lname">Product Picture</label>
+                <label>Product Picture</label>
                 <br>
                 {{form.product_picture}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label for="lname">Product Hunt Link</label>
+                <label>Product Hunt Link</label>
                 {{form.product_ph_link}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label for="lname">Product Website</label>
+                <label>Product Website</label>
                 {{form.product_website}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label for="lname">Product Lauch Date</label>
+                <label>Product Lauch Date</label>
                 <br>
                 {{form.product_launch_date}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label for="fname">Product Twitter Username</label>
+                <label>Product Twitter Username</label>
                 {{form.product_twitter}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label for="fname">Product Owner Username</label>
+                <label>Product Owner Username</label>
                 {{form.product_owner_twitter}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label for="country">Product Team Sizes</label>
+                <label>Product Team Sizes</label>
                 {{form.product_team_size}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label for="country">Country</label>
+                <label>Country</label>
                 {{form.product_city}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label for="subject">Product Turkish Description</label>
+                <label>Product Turkish Description</label>
                 {{form.product_about_tr}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label for="subject">Product English Description</label>
+                <label>Product English Description</label>
                 {{form.product_about_en}}
             </div>
         </div>
