@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('rosetta/', include('rosetta.urls')),
     path('', include('products.urls')),
     path('', include('openstartup.urls')),
     path('', include('addyourstartup.urls')),
