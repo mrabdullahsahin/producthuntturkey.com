@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'openstartup.apps.OpenstartupConfig',
     'addyourstartup.apps.AddyourstartupConfig',
     'rosetta',
+    'parler',
 ]
 
 MIDDLEWARE = [
