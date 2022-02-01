@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'products.apps.ProductsConfig',
     'openstartup.apps.OpenstartupConfig',
     'addyourstartup.apps.AddyourstartupConfig',
+    'rosetta',
 ]
 
 MIDDLEWARE = [
