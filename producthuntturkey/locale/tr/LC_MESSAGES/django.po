@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-01 22:41+0300\n"
+"POT-Creation-Date: 2022-02-01 22:58+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,3 +33,47 @@ msgstr ""
 #: products/models.py:29
 msgid "product_launch_date"
 msgstr ""
+
+#: templates/add-your-startup.html:18
+msgid "Product Name"
+msgstr "Ürünün Adı"
+
+#: templates/add-your-startup.html:24
+msgid "Product Picture"
+msgstr "Ürünün Resmi"
+
+#: templates/add-your-startup.html:31
+msgid "Product Hunt Link"
+msgstr "Ürünün Product Hunt Linki"
+
+#: templates/add-your-startup.html:37
+msgid "Product Website"
+msgstr "Ürünün Websitesinin Linki"
+
+#: templates/add-your-startup.html:43
+msgid "Product Lauch Date"
+msgstr "Ürünün Product Hunt'ta Yayınlandığı Tarih"
+
+#: templates/add-your-startup.html:50
+msgid "Product Twitter Username"
+msgstr "Ürünün Twitter Kullanıcı Adı"
+
+#: templates/add-your-startup.html:56
+msgid "Product Owner Username"
+msgstr "Ürün Geliştiricisinin Twitter Kullanıcı Adı"
+
+#: templates/add-your-startup.html:62
+msgid "Product Team Sizes"
+msgstr "Ürünün Takım Büyüklüğü"
+
+#: templates/add-your-startup.html:68
+msgid "Country"
+msgstr "Ürünün Geliştirildiği Şehir"
+
+#: templates/add-your-startup.html:74
+msgid "Product Turkish Description"
+msgstr "Ürünün Türkçe Açıklaması"
+
+#: templates/add-your-startup.html:80
+msgid "Product English Description"
+msgstr "Ürünün İngilizce Açıklaması"
