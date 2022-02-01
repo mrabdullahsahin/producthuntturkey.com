@@ -128,6 +128,17 @@ LOCALE_PATHS = [
     BASE_DIR / 'locale/',
 ]
 
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en',},
+        {'code': 'tr',},
+    ),
+    'default': {
+        'fallbacks': ['en'],
+        'hide_untranslated': False,
+    }
+}
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
