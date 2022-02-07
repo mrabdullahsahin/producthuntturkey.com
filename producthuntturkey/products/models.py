@@ -20,12 +20,12 @@ class Product(TranslatableModel):
         product_description = models.TextField(blank=True, null=True),
     )
 
-    product_name = models.CharField(max_length=200)
+    product_name = models.CharField(max_length=200, blank=True, null=True)
     product_launch_date = models.DateField(blank=True, null=True)
     slug = models.SlugField(max_length=200, unique=True, null=True)
     product_picture = models.ImageField(upload_to="products/%Y/%m/%d/", default="default/producthuntturkey-logo.png")
     product_city = models.ForeignKey(City, blank=True, null=True, on_delete=models.DO_NOTHING)
-    product_ph_link = models.CharField(max_length=250)
+    product_ph_link = models.CharField(max_length=250, blank=True, null=True)
     product_website = models.CharField(max_length=250, blank=True, null=True)
     product_team_size = models.ForeignKey(TeamSize, blank=True, null=True, on_delete=models.DO_NOTHING)
     product_twitter = models.CharField(max_length=250, blank=True, null=True)
