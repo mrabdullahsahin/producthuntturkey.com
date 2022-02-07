@@ -18,10 +18,10 @@ class TeamSize(models.Model):
 class Product(TranslatableModel):
     translations = TranslatedFields(
         product_description = models.TextField(blank=True, null=True),
-        product_launch_date = models.DateField(),
     )
 
     product_name = models.CharField(max_length=200)
+    product_launch_date = models.DateField()
     slug = models.SlugField(max_length=200, unique=True, null=True)
     product_picture = models.ImageField(upload_to="products/%Y/%m/%d/", default="default/producthuntturkey-logo.png")
     product_city = models.ForeignKey(City, blank=True, null=True, on_delete=models.DO_NOTHING)
