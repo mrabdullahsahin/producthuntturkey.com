@@ -80,8 +80,8 @@ msgstr "Katkıda bulunun!"
 
 #: templates/partials/_navbar.html:17
 msgid "Open Startup"
-msgstr ""
+msgstr "Açık Girişim"
 
 #: templates/partials/_navbar.html:20
 msgid "Add Your Product"
-msgstr ""
+msgstr "Ürününü Ekle"
