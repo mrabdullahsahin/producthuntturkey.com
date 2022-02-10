@@ -88,4 +88,4 @@ msgstr "Açık Girişim"
 
 #: templates/partials/_navbar.html:20
 msgid "Add Your Product"
-msgstr "Ürününü Ekle"
+msgstr "Girişimini Ekle"
