@@ -2,6 +2,8 @@
 {% load static %}
 
 <article class="social-media">
+    {% get_current_language as CURRENT_LANGUAGE %}
+    {% if CURRENT_LANGUAGE == 'en' %}
     <section class="social-media__item">
         <a href="https://github.com/mrabdullahsahin/producthuntturkey.com" target="_blank">
             <figure>
@@ -30,4 +32,34 @@
             </figure>
         </a>
     </section>
+    {% elif CURRENT_LANGUAGE == 'tr' %}
+    <section class="social-media__item">
+        <a href="https://github.com/mrabdullahsahin/producthuntturkey.com" target="_blank">
+            <figure>
+                <img src="{% static 'images/svg/github_tr.svg' %}" alt="Product Hunt Turkey Github">
+            </figure>
+        </a>
+    </section>
+    <section class="social-media__item">
+        <a href="https://twitter.com/productturkey" target="_blank">
+            <figure>
+                <img src="{% static 'images/svg/twitter_tr.svg' %}" alt="Product Hunt Turkey Twitter">
+            </figure>
+        </a>
+    </section>
+    <section class="social-media__item">
+        <a href="https://tr.linkedin.com/company/producthuntturkey/" target="_blank">
+            <figure>
+                <img src="{% static 'images/svg/linkedin_tr.svg' %}" alt="Product Hunt Turkey Linkedin">
+            </figure>
+        </a>
+    </section>
+    <section class="social-media__item">
+        <a href="https://t.me/producthuntturkey" target="_blank">
+            <figure>
+                <img src="{% static 'images/svg/telegram_tr.svg' %}" alt="Product Hunt Turkey Telegram">
+            </figure>
+        </a>
+    </section>
+    {% endif %}
 </article>
