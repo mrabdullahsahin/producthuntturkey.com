@@ -3,6 +3,7 @@
 {% load static %}
 
 {% block content %}
+{% include 'partials/_social-media.html' %}
 <div class="product-section">
     {% regroup products by product_launch_date as products_list %}
     {% for products in products_list %}
