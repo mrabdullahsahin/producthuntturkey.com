@@ -30,4 +30,8 @@
     .social-media{
         width: 98%;
     }
+
+    .social-media__item:last-of-type{
+        margin-right: 15px;
+    }
 }
