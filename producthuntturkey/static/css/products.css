@@ -1,9 +1,9 @@
-.product-section{
+.product-section {
     display: flex;
     flex-direction: column;
 }
 
-.time{
+.time {
     display: flex;
     margin: auto;
     font-weight: bold;
@@ -13,7 +13,7 @@
     margin-bottom: 10px;
 }
 
-.startup-list{
+.startup-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,7 +25,7 @@
     border-radius: 5px;
 }
 
-.list-data{
+.list-data {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -36,19 +36,19 @@
     border-radius: 5px;
 }
 
-.list-data:hover{
+.list-data:hover {
     background-color: black;
     color: white;
 }
 
-.picture{
+.picture {
     display: flex;
     height: 100px;
     width: 100px;
     padding: 15px;
 }
 
-.info{
+.info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -57,7 +57,7 @@
     flex-shrink: 1;
 }
 
-.info-title{
+.info-title {
     display: flex;
     font-style: normal;
     font-weight: bold;
@@ -67,20 +67,20 @@
     top: 0;
 }
 
-.info-description{
+.info-description {
     display: flex;
     font-style: normal;
     font-weight: normal;
     font-size: 1.2em;
 }
 
-.support{
+.support {
     display: flex;
     text-decoration: none;
     cursor: default;
 }
 
-.support-button{
+.support-button {
     height: 50px;
     border-radius: 10px;
     color: black;
@@ -94,40 +94,40 @@
     background-color: white;
 }
 
-.support-button:hover{
-    color:white;
+.support-button:hover {
+    color: white;
     border: 0px;
     background-color: black;
     border: 1px solid white;
     transition: 0.3s;
 }
 
-@media (max-width: 900px){
-    .time{
+@media (max-width: 900px) {
+    .time {
         margin-left: 1%;
         margin-top: 5%;
         margin-bottom: 3%;
     }
 
-    .startup-list{
+    .startup-list {
         width: 98%;
     }
 
-    .picture{
+    .picture {
         height: 80px;
         width: 80px;
     }
 
-    .info-title{
+    .info-title {
         font-size: 15px;
         line-height: 25px;
     }
 
-    .info-description{
+    .info-description {
         font-size: 15px;
     }
 
-    .support-button{
+    .support-button {
         width: 75px;
         height: 40px;
         border-radius: 5px;

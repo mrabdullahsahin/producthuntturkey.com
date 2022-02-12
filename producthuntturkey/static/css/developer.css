@@ -1,4 +1,4 @@
-.developer{
+.developer {
     position: fixed;
     bottom: 0;
     width: 150px;
@@ -9,14 +9,14 @@
     right: 0;
 }
 
-.developer:hover{
+.developer:hover {
     background-color: black;
     opacity: .8;
     color: white;
     text-decoration: none;
 }
 
-.navigation{
+.navigation {
     text-decoration: none;
     color: white;
 }

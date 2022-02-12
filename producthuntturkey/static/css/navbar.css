@@ -1,4 +1,4 @@
-.header-section{
+.header-section {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -10,24 +10,24 @@
   height: 100px;
 }
 
-.header-section a{
+.header-section a {
   text-decoration: none;
 }
 
-.header-logo{
+.header-logo {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
 }
 
-.header-logo-item{
+.header-logo-item {
   display: flex;
   width: 75px;
   height: 75px;
 }
 
-.header-logo-item-name{
+.header-logo-item-name {
   display: flex;
   color: black;
   text-align: left;
@@ -37,16 +37,16 @@
   text-decoration: none;
 }
 
-.menu-items{
+.menu-items {
   display: flex;
 }
 
-.menu-item{
+.menu-item {
   display: flex;
   text-decoration: none;
 }
 
-.menu-button{
+.menu-button {
   display: flex;
   text-decoration: none;
   border: 2px solid black;
@@ -59,33 +59,33 @@
   background-color: white;
 }
 
-.menu-button:hover{
+.menu-button:hover {
   background-color: black;
   color: white;
-  transition: 0.5s all;   
+  transition: 0.5s all;
   cursor: pointer;
 }
 
-.menu-button:first-child{
+.menu-button:first-child {
   margin-right: 10px;
 }
 
-@media (max-width: 900px){
-  .header-section{
+@media (max-width: 900px) {
+  .header-section {
     justify-content: space-between;
   }
 
-  .header-logo-item{
+  .header-logo-item {
     width: 50px;
     height: 50px;
   }
 
-  .menu-button{
+  .menu-button {
     font-size: 15px;
     border-radius: 5px;
   }
 
-  .header-logo-item-name{
+  .header-logo-item-name {
     padding-left: 5px;
   }
 }

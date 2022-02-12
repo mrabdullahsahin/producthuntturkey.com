@@ -1,4 +1,4 @@
-.OpenSourceContainer{
+.OpenSourceContainer {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -6,38 +6,38 @@
     opacity: 0.9;
 }
 
-.OpenSourceContent{
+.OpenSourceContent {
     position: static;
     color: white;
     font-size: 15px;
     margin: 10px;
 }
 
-.OpenSourceLink{
+.OpenSourceLink {
     text-decoration: none;
     opacity: 1;
     color: #f42a52;
     transition: box-shadow 0.2s ease 0s, color 0.2s ease 0s;
-	transition-duration: 0.2s;
-	transition-property: box-shadow, color;
+    transition-duration: 0.2s;
+    transition-property: box-shadow, color;
     border-bottom-left-radius: 2px;
-	border-bottom-right-radius: 2px;
-	border-radius: 2px;
-	border-top-left-radius: 2px;
-	border-top-right-radius: 2px;
-	bottom: 0px;
+    border-bottom-right-radius: 2px;
+    border-radius: 2px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    bottom: 0px;
     box-shadow: rgba(255, 56, 96, 0) 0px 10px 0px 0px, rgba(255, 56, 96, 0.2) 0px -0.125em inset;
-	box-sizing: inherit;
-	cursor: pointer;
+    box-sizing: inherit;
+    cursor: pointer;
 }
 
-.OpenSourceLink:hover { 
-	box-shadow: rgba(255, 56, 96, 0.1) 0px 1px 0px 4px, rgba(255, 56, 96, 0.1) 0px -1.375em 0px inset;
-	color: #f42a52;
+.OpenSourceLink:hover {
+    box-shadow: rgba(255, 56, 96, 0.1) 0px 1px 0px 4px, rgba(255, 56, 96, 0.1) 0px -1.375em 0px inset;
+    color: #f42a52;
 }
 
 @media (max-width: 900px) {
-    .OpenSourceContent{
+    .OpenSourceContent {
         font-size: 10px;
     }
 }
