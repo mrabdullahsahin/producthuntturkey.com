@@ -1,0 +1,33 @@
+.social-media{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 65%;
+    background: #FFFFFF;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.social-media__item{
+    display: flex;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.social-media__item:first-of-type{
+    margin-left: 15px;
+}
+
+.social-media__item:not(:last-of-type){
+    margin-right: 15px;
+}
+
+@media (max-width: 900px){
+    .social-media{
+        width: 98%;
+    }
+}
