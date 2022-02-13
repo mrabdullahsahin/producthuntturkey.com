@@ -2,6 +2,10 @@
 {% load i18n %}
 {% load static %}
 
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/add-your-startup.css' %}">
+{% endblock css %}
+
 {% block content %}
 <div class="container">
     {% if messages %}
