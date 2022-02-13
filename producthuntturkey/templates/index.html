@@ -2,6 +2,10 @@
 {% load i18n %}
 {% load static %}
 
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/products.css' %}">
+{% endblock css %}
+
 {% block content %}
 {% include 'partials/_social-media.html' %}
 <div class="product-section">
