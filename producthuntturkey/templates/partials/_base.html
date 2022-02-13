@@ -1,7 +1,13 @@
+{% load i18n %}
 {% load static %}
 
 <!DOCTYPE html>
+{% get_current_language as CURRENT_LANGUAGE %}
+{% if CURRENT_LANGUAGE == 'en' %}
 <html lang="en">
+{% elif CURRENT_LANGUAGE == 'tr' %}
+<html lang="tr">
+{% endif %}
 
 <head>
     <meta charset="UTF-8">
