@@ -21,6 +21,8 @@ def add_to_product_table(self, request, queryset):
         product.set_current_language('tr')
         product.product_description = startup.product_about_tr
         product.save()
+        startup.status = 'p'
+        startup.save()
         self.message_user(
             request,"Product tablosuna kayıt başarıyla gerçekleştirildi.",
         )
