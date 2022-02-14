@@ -3,6 +3,11 @@ from products.models import City, TeamSize
 from django.utils.text import slugify
 from datetime import datetime
 
+STATUS_CHOICES = [
+    ('w', 'İnceleme Bekliyor'),
+    ('p', 'Product Tablosuna Eklendi'),
+    ('d', 'Yayınlama'),
+]
 class AddYourStartupArea(models.Model):
     product_name = models.CharField(max_length=250, null=True, blank=True)
     slug = models.SlugField(max_length=250, unique=True, null=True)
@@ -23,6 +28,7 @@ class AddYourStartupArea(models.Model):
     product_picture = models.ImageField(upload_to=get_filepath, default="default/producthuntturkey-logo.png", null=True, blank=True)
     product_city = models.ForeignKey(City, on_delete=models.DO_NOTHING, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='w')
 
     def __str__(self):
         return self.product_name
