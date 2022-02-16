@@ -6,6 +6,10 @@ from .forms import AddYourStartupForm
 
 def addyourstartup(request):
     form = AddYourStartupForm()
+    
+    context = {
+        'form': form
+    }
 
     if request.method == "POST":
         form = AddYourStartupForm(request.POST, request.FILES)
@@ -13,9 +17,9 @@ def addyourstartup(request):
             form.save()
             messages.success(request, "Your product was successfully submitted!")
             return redirect('add-your-startup')
-
-    context = {
-        'form': form
-    }
+        else:
+            return render(request, 'add-your-startup.html', context)
+    else:
+        return render(request, 'add-your-startup.html', context)
 
     return render(request, 'add-your-startup.html', context)
