@@ -1,20 +1,21 @@
 from django.shortcuts import render
 from . models import Product
 
-def index(request):
-    products = Product.objects.filter(is_avaliable=True).order_by('-product_launch_date')
+def index(request, product_slug=None):
+    if product_slug != None:
+        product = Product.objects.get(slug = product_slug)
 
-    context = {
-        'products': products
-    }
+        context = {
+            'product': product
+        }
 
-    return render(request, 'index.html', context)
+        return render(request, 'product-detail.html', context)
 
-def product_detail(request, product_slug):
-    product = Product.objects.get(slug = product_slug)
-    
-    context = {
-        'product': product
-    }
+    else:
+        products = Product.objects.filter(is_avaliable=True).order_by('-product_launch_date')
 
-    return render(request, 'product-detail.html', context)
+        context = {
+            'products': products
+        }
+
+        return render(request, 'index.html', context)
