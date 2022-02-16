@@ -47,6 +47,7 @@
 }
 
 input[type=text],
+input[type=url],
 select,
 textarea {
   width: 100%;
