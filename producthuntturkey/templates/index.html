@@ -27,10 +27,15 @@
                     <span>🧑‍💼 {{product.product_team_size}}</span>
                 </div>
             </div>
-            <a class="support" href="{{product.product_ph_link}}?ref=producthuntturkey.com" target="_blank"
-                rel="noopener noreferrer">
-                <button class="support-button">{% trans "View" %}</button>
-            </a>
+            <div>
+                <a class="support" href="{{product.product_ph_link}}?ref=producthuntturkey.com" target="_blank"
+                    rel="noopener noreferrer">
+                    <button class="support-button">{% trans "Go" %}</button>
+                </a>
+                <a class="support" href="{% url 'product_detail' product.slug %}">
+                    <button class="support-button">{% trans "View" %}</button>
+                </a>
+            </div>
         </article>
     </section>
     {% endfor %}
