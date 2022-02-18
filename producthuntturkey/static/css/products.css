@@ -142,5 +142,6 @@
         cursor: pointer;
         margin-right: 5px;
         background-color: white;
+        width: 100%;
     }
 }
