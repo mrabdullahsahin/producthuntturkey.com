@@ -39,5 +39,5 @@ def add_to_product_table(self, request, queryset):
 @admin.register(AddYourStartupArea)
 class AddYourStartupAreaAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('product_name',)}
-    list_display = ['product_name', 'status']
+    list_display = ['product_name', 'status','product_city']
     actions = [add_to_product_table]
