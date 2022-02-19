@@ -24,7 +24,7 @@
                 <p class="info-description">{{product.product_description}}</p>
                 <div>
                     <span><a href="{% url 'city-list' product.product_city.slug %}">🇹🇷 {{product.product_city}}</a></span>
-                    <span>🧑‍💼 {{product.product_team_size}}</span>
+                    <span><a href="{% url 'team-size-list' product.product_team_size.slug %}">🧑‍💼 {{product.product_team_size}}</a></span>
                 </div>
             </div>
             <div>
