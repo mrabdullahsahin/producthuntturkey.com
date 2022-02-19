@@ -10,9 +10,10 @@ class CityAdmin(admin.ModelAdmin):
 class TeamSize(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('size',)}
 
-class ProductAdmin(admin.ModelAdmin):
+class ProductAdmin(TranslatableAdmin):
+    list_display = ('product_name', 'slug', 'product_city','is_avaliable')
     list_filter = ('is_avaliable','product_city','product_team_size')
     search_fields = ('product_name','product_description')
     prepopulated_fields = {'slug': ('product_name',)}
 
-admin.site.register(Product, TranslatableAdmin)
+admin.site.register(Product, ProductAdmin)
