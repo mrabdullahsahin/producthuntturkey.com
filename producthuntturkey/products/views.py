@@ -13,10 +13,12 @@ def index(request, product_slug=None, city_slug=None, teamsize_slug=None):
 
     elif city_slug != None:
         city_page = get_object_or_404(City, slug=city_slug)
+        city =  City.objects.get(slug=city_slug)
         products = Product.objects.all().filter(is_avaliable=True, product_city = city_page).order_by('-product_launch_date')
 
         context = {
-            'products': products
+            'products': products,
+            'city': city
         }
 
         return render(request, 'city.html', context)
