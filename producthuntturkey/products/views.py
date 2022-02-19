@@ -25,10 +25,12 @@ def index(request, product_slug=None, city_slug=None, teamsize_slug=None):
 
     elif teamsize_slug != None:
         team_page = get_object_or_404(TeamSize, slug=teamsize_slug)
+        team_size =  TeamSize.objects.get(slug=teamsize_slug)
         products = Product.objects.all().filter(is_avaliable=True, product_team_size = team_page).order_by('-product_launch_date')
 
         context = {
-            'products': products
+            'products': products,
+            'team-size': team_size
         }
 
         return render(request, 'team-size.html', context)
