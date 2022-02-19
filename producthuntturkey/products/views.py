@@ -30,7 +30,7 @@ def index(request, product_slug=None, city_slug=None, teamsize_slug=None):
 
         context = {
             'products': products,
-            'team-size': team_size
+            'teamsize': team_size
         }
 
         return render(request, 'team-size.html', context)
