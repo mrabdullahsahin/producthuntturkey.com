@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-18 19:03+0300\n"
+"POT-Creation-Date: 2022-02-21 19:35+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,13 +74,25 @@ msgstr "Ürünün İngilizce Açıklaması"
 msgid "Submit"
 msgstr "Gönder"
 
-#: templates/index.html:33
+#: templates/city.html:36 templates/index.html:33 templates/team-size.html:36
 msgid "Go"
 msgstr "Git"
 
-#: templates/index.html:36
+#: templates/city.html:39 templates/index.html:36 templates/team-size.html:39
 msgid "View"
 msgstr "Görüntüle"
+
+#: templates/open-startup.html:12
+msgid "Number of Total Startups"
+msgstr "Toplam Girişim Sayısı"
+
+#: templates/open-startup.html:16
+msgid "Number of E-Mail Subscribers"
+msgstr "Toplam E-Mail Abonesi"
+
+#: templates/open-startup.html:20
+msgid "Number of Telegram Channel Subscribers"
+msgstr "Toplam Telegram Kanalı Abonesi"
 
 #: templates/partials/_github.html:8
 msgid "Product Hunt Turkey is an open source."
