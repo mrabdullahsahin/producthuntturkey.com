@@ -41,6 +41,19 @@
     color: white;
 }
 
+span > a {
+    color: black;
+    text-decoration: none;
+}
+
+.list-data:hover a {
+    color: white;
+}
+
+span > a:hover {
+    text-decoration: underline;
+}
+
 .picture {
     display: flex;
     height: 100px;
