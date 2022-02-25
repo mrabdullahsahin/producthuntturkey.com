@@ -2,28 +2,75 @@
 {% load i18n %}
 {% load static %}
 
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/product.css' %}">
+{% endblock css %}
+
 {% block content %}
-<h1>{{ product.product_name }}</h1>
-<br>
-<span>{{ product.product_launch_date }}</span>
-<br>
-<figure>
-    <img class="picture" height="100" width="100" src="{{product.product_picture.url}}"
-        alt="product-hunt-turkey-{{product.product_name}}" />
-</figure>
-<br>
-<span><a href="{% url 'city-list' product.product_city.slug %}">🇹🇷 {{product.product_city}}</a></span>
-<br>
-<span><a href="{% url 'team-size-list' product.product_team_size.slug %}">🧑‍💼 {{product.product_team_size}}</a></span>
-<br>
-<span>PH Link: {{ product.product_ph_link }}</span>
-<br>
-<span>Website: {{ product.product_website }}</span>
-<br>
-<span>Product Twitter: {{ product.product_twitter }}</span>
-<br>
-<span>Owner Twitter: {{ product.product_owner_twitter }}</span>
-<br>
-<span>Votes: {{ product.product_hunt_votes }}</span>
-<br>
+<div class="product-section">
+    <time class="time">{{product.product_launch_date}}</time>
+    <section class="startup-list">
+        <article class="list-data">
+            <figure>
+                <img class="picture" src="{{product.product_picture.url}}"
+                    alt="product-hunt-turkey-{{product.product_name}}" />
+            </figure>
+            <div class="info">
+                <h2 class="info-title">{{product.product_name}}</h2>
+                <p class="info-description">{{product.product_description}}</p>
+            </div>
+            <div>
+                <a class="support" href="{{product.product_ph_link}}?ref=producthuntturkey.com" target="_blank"
+                    rel="noopener noreferrer">
+                    <button class="support-button">{% trans "Go" %}</button>
+                </a>
+                <a class="support" href="{% url 'product_detail' product.slug %}">
+                    <button class="support-button">{% trans "View" %}</button>
+                </a>
+            </div>
+        </article>
+    </section>
+</div>
+
+<div class="product-info-container">
+    <div class="product-info">
+        <h2 class="product-info-title">{% trans "Developed in" %}</h2>
+        <a class="product-info-content" href="{% url 'city-list' product.product_city.slug %}">🇹🇷
+            {{product.product_city}}</a>
+    </div>
+    <div class="product-info">
+        <h2 class="product-info-title">{% trans "Product Team Size" %}</h2>
+        <a class="product-info-content" href="{% url 'team-size-list' product.product_team_size.slug %}">🧑‍💼
+            {{product.product_team_size}}</a>
+    </div>
+    <div class="product-info">
+        <h2 class="product-info-title">{% trans "Visit on Product Hunt Page" %}</h2>
+        <a class="product-info-content" href="{{ product.product_ph_link }}" target="_blank">Visit</a>
+    </div>
+    {% if product.product_website != None %}
+    <div class="product-info">
+        <h2 class="product-info-title">{% trans "Visit on Product Website" %}</h2>
+        <a class="product-info-content" href="{{ product.product_website }}?ref=producthuntturkey.com" target="_blank">Visit</a>
+    </div>
+    {% endif %}
+
+    {% if product.product_twitter %}
+    <div class="product-info">
+        <h2 class="product-info-title">{% trans "Visit on Product Twitter Profile" %}</h2>
+        <a class="product-info-content" href="{{ product.product_twitter }}?ref=producthuntturkey.com" target="_blank">Visit</a>
+    </div>
+    {% endif %}
+    {% if product.product_owner_twitter %}
+    <div class="product-info">
+        <h2 class="product-info-title">{% trans "Visit on Product Owner Twitter Profile" %}</h2>
+        <a class="product-info-content" href="{{ product.product_owner_twitter }}?ref=producthuntturkey.com" target="_blank">Visit</a>
+    </div>
+    {% endif %}
+    {% if product.product_hunt_votes > 0 %}
+    <div class="product-info">
+        <h2 class="product-info-title">{% trans "Total of Votes" %}</h2>
+        <p class="product-info-content">{{ product.product_hunt_votes }}</p>
+    </div>
+    {% endif %}
+</div>
 {% endblock content %}

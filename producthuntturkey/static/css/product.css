@@ -1,0 +1,245 @@
+.product-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.time {
+    display: flex;
+    margin: auto;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-left: 17.5%;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.startup-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    background: #FFFFFF;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.list-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    justify-content: space-around;
+    width: 100%;
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+
+.list-data:hover {
+    background-color: black;
+    color: white;
+}
+
+span>a {
+    color: black;
+    text-decoration: none;
+}
+
+.list-data:hover a {
+    color: white;
+}
+
+span>a:hover {
+    text-decoration: underline;
+}
+
+.picture {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    padding: 15px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.info-title {
+    display: flex;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2em;
+    line-height: 40px;
+    left: 0;
+    top: 0;
+}
+
+.info-description {
+    display: flex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+.support {
+    display: flex;
+    text-decoration: none;
+    cursor: default;
+}
+
+.support-button {
+    height: 50px;
+    border-radius: 10px;
+    color: black;
+    font-weight: normal;
+    padding: 8px 15px;
+    font-size: 1.2em;
+    border: 1px solid black;
+    margin: auto;
+    cursor: pointer;
+    margin-right: 25px;
+    background-color: white;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.support-button:hover {
+    color: white;
+    border: 0px;
+    background-color: black;
+    border: 1px solid white;
+    transition: 0.3s;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-item {
+    display: flex;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.product-info-container {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 65%;
+    margin-top: 7px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background: white;
+    border-radius: 5px;
+    width: 250px;
+    height: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+}
+
+.product-info>a:hover{
+    text-decoration: underline;
+}
+
+.product-info-title {
+    display: flex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 41px;
+}
+
+.product-info-content {
+    display: flex;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 65px;
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 900px) {
+    .time {
+        margin-left: 1%;
+        margin-top: 5%;
+        margin-bottom: 3%;
+    }
+
+    .startup-list {
+        width: 98%;
+    }
+
+    .picture {
+        height: 80px;
+        width: 80px;
+    }
+
+    .info-title {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .info-description {
+        font-size: 15px;
+    }
+
+    .support-button {
+        width: 75px;
+        height: 40px;
+        border-radius: 5px;
+        color: black;
+        font-weight: normal;
+        padding: 5px;
+        font-size: 15px;
+        border: 1px solid black;
+        margin: auto;
+        cursor: pointer;
+        margin-right: 5px;
+        background-color: white;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .product-info-container{
+        width: 98%;
+    }
+
+    .product-info{
+        width: 150px;
+        height: 150px;
+        margin-top: 15px;
+    }
+
+    .product-info-title{
+        font-size: 12px;
+        line-height: 11px;
+    }
+
+    .product-info-content{
+        font-weight: 800;
+        font-size: 25px;
+    }
+}
