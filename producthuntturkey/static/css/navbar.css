@@ -10,12 +10,12 @@ ul {
     list-style: none;
 }
 
-.container {
+.menu-container {
     max-width: 65%;
     margin: auto;
 }
 
-.row {
+.container-row {
     display: flex;
     flex-wrap: wrap;
 }
@@ -108,7 +108,7 @@ li > a {
 }
 
 @media(max-width: 991px) {
-    .container {
+    .menu-container {
         max-width: 98%;
     }
 
