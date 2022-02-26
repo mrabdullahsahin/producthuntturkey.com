@@ -22,7 +22,7 @@
             </label>
             <nav class="nav">
                 <ul>
-                    <li><a href="{% url 'index' %}" class="active">Home</a></li>
+                    <li><a href="{% url 'index' %}" class="active">{% trans "Home" %}</a></li>
                     <li><a href="{% url 'open-startup' %}">{% trans "Open Startup" %}</a></li>
                     <li><a href="{% url 'add-your-startup' %}">{% trans "Add Your Product" %}</a></li>
                     {% for language in languages %}

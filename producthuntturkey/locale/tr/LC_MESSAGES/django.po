@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-26 15:42+0300\n"
+"POT-Creation-Date: 2022-02-26 15:47+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -103,6 +103,10 @@ msgstr "Product Hunt Turkey açık kaynaklı bir girişimdir."
 #: templates/partials/_github.html:10
 msgid "Contribute on github!"
 msgstr "Katkıda bulunun!"
+
+#: templates/partials/_navbar.html:25
+msgid "Home"
+msgstr "Anasayfa"
 
 #: templates/partials/_navbar.html:26
 msgid "Open Startup"
