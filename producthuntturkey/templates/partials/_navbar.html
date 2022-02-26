@@ -20,11 +20,15 @@
             <label for="nav-check" class="nav-toggler">
                 <span></span>
             </label>
-            <nav class="nav">
+            <nav class="nav">            
                 <ul>
-                    <li><a href="{% url 'index' %}" class="active">{% trans "Home" %}</a></li>
-                    <li><a href="{% url 'open-startup' %}">{% trans "Open Startup" %}</a></li>
-                    <li><a href="{% url 'add-your-startup' %}">{% trans "Add Your Product" %}</a></li>
+                    {% if CURRENT_LANGUAGE == 'en' %}
+                    <li><a href="{% url 'index' %}" class="{% if '/en/' == request.path %}active{% endif %}">{% trans "Home" %}</a></li>
+                    {% elif CURRENT_LANGUAGE == 'tr' %}
+                    <li><a href="{% url 'index' %}" class="{% if '/tr/' == request.path %}active{% endif %}">{% trans "Home" %}</a></li>
+                    {% endif %}
+                    <li><a href="{% url 'open-startup' %}" class="{% if '/open-startup' in request.path %}active{% endif %}">{% trans "Open Startup" %}</a></li>
+                    <li><a href="{% url 'add-your-startup' %}" class="{% if '/add-your-startup' in request.path %}active{% endif %}">{% trans "Add Your Product" %}</a></li>
                     {% for language in languages %}
                     {% if language.code != CURRENT_LANGUAGE %}
                     {% if language.code == 'en' %}
