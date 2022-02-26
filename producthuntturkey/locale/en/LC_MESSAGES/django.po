@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-21 19:35+0300\n"
+"POT-Creation-Date: 2022-02-26 15:42+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,11 +74,13 @@ msgstr ""
 msgid "Submit"
 msgstr ""
 
-#: templates/city.html:36 templates/index.html:33 templates/team-size.html:36
+#: templates/city.html:36 templates/index.html:33
+#: templates/product-detail.html:25 templates/team-size.html:36
 msgid "Go"
 msgstr ""
 
-#: templates/city.html:39 templates/index.html:36 templates/team-size.html:39
+#: templates/city.html:39 templates/index.html:36
+#: templates/product-detail.html:28 templates/team-size.html:39
 msgid "View"
 msgstr ""
 
@@ -102,10 +104,38 @@ msgstr ""
 msgid "Contribute on github!"
 msgstr ""
 
-#: templates/partials/_navbar.html:17
+#: templates/partials/_navbar.html:26
 msgid "Open Startup"
 msgstr ""
 
-#: templates/partials/_navbar.html:20
+#: templates/partials/_navbar.html:27
 msgid "Add Your Product"
+msgstr ""
+
+#: templates/product-detail.html:37
+msgid "Developed in"
+msgstr ""
+
+#: templates/product-detail.html:42
+msgid "Product Team Size"
+msgstr ""
+
+#: templates/product-detail.html:47
+msgid "Visit on Product Hunt Page"
+msgstr ""
+
+#: templates/product-detail.html:52
+msgid "Visit on Product Website"
+msgstr ""
+
+#: templates/product-detail.html:59
+msgid "Visit on Product Twitter Profile"
+msgstr ""
+
+#: templates/product-detail.html:65
+msgid "Visit on Product Owner Twitter Profile"
+msgstr ""
+
+#: templates/product-detail.html:71
+msgid "Total of Votes"
 msgstr ""

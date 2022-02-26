@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-21 19:35+0300\n"
+"POT-Creation-Date: 2022-02-26 15:42+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -74,11 +74,13 @@ msgstr "Ürünün İngilizce Açıklaması"
 msgid "Submit"
 msgstr "Gönder"
 
-#: templates/city.html:36 templates/index.html:33 templates/team-size.html:36
+#: templates/city.html:36 templates/index.html:33
+#: templates/product-detail.html:25 templates/team-size.html:36
 msgid "Go"
 msgstr "Git"
 
-#: templates/city.html:39 templates/index.html:36 templates/team-size.html:39
+#: templates/city.html:39 templates/index.html:36
+#: templates/product-detail.html:28 templates/team-size.html:39
 msgid "View"
 msgstr "Görüntüle"
 
@@ -102,10 +104,46 @@ msgstr "Product Hunt Turkey açık kaynaklı bir girişimdir."
 msgid "Contribute on github!"
 msgstr "Katkıda bulunun!"
 
-#: templates/partials/_navbar.html:17
+#: templates/partials/_navbar.html:26
 msgid "Open Startup"
 msgstr "Açık Girişim"
 
-#: templates/partials/_navbar.html:20
+#: templates/partials/_navbar.html:27
 msgid "Add Your Product"
 msgstr "Girişimini Ekle"
+
+#: templates/product-detail.html:37
+msgid "Developed in"
+msgstr "Geliştirildiği Şehir"
+
+#: templates/product-detail.html:42
+#, fuzzy
+#| msgid "Product Team Sizes"
+msgid "Product Team Size"
+msgstr "Ürünün Takım Büyüklüğü"
+
+#: templates/product-detail.html:47
+#, fuzzy
+#| msgid "Product Hunt Link"
+msgid "Visit on Product Hunt Page"
+msgstr "Ürünün Product Hunt Sayfasını Ziyaret Et"
+
+#: templates/product-detail.html:52
+#, fuzzy
+#| msgid "Product Website"
+msgid "Visit on Product Website"
+msgstr "Ürünün Websitesini Ziyaret Et"
+
+#: templates/product-detail.html:59
+#, fuzzy
+#| msgid "Product Twitter Username"
+msgid "Visit on Product Twitter Profile"
+msgstr "Ürünün Twitter Hesabını Ziyaret Et"
+
+#: templates/product-detail.html:65
+msgid "Visit on Product Owner Twitter Profile"
+msgstr "Ürün Geliştiricisinin Twitter Hesabını Ziyaret Et"
+
+#: templates/product-detail.html:71
+msgid "Total of Votes"
+msgstr "Toplam Aldığı Oy"
