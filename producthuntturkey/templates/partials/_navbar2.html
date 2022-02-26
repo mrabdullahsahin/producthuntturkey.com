@@ -1,0 +1,40 @@
+{% load i18n %}
+{% load static %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% get_available_languages as AVAILABLE_LANGUAGES %}
+{% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
+
+<header class="header">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="logo">
+                <a href="#">
+                    <figure>
+                        <img class="header-logo-item" src="{% static 'images/producthuntturkey-logo.png' %}"
+                            alt="Product Hunt Turkey Logo" height="35" width="35" />
+                    </figure>
+                </a>
+            </div>
+            <input type="checkbox" id="nav-check">
+            <label for="nav-check" class="nav-toggler">
+                <span></span>
+            </label>
+            <nav class="nav">
+                <ul>
+                    <li><a href="{% url 'index' %}" class="active">Home</a></li>
+                    <li><a href="{% url 'open-startup' %}">{% trans "Open Startup" %}</a></li>
+                    <li><a href="{% url 'add-your-startup' %}">{% trans "Add Your Product" %}</a></li>
+                    {% for language in languages %}
+                    {% if language.code != CURRENT_LANGUAGE %}
+                    {% if language.code == 'en' %}
+                    <li><a href="/{{ language.code }}/">🇺🇸 {{ language.name_local }}</a></li>
+                    {% elif language.code == 'tr' %}
+                    <li><a href="/{{ language.code }}/">🇹🇷 {{ language.name_local }}</a></li>
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
