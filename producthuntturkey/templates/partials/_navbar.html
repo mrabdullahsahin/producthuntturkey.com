@@ -1,5 +1,6 @@
 {% load i18n %}
 {% load static %}
+{% load custom_tags %}
 {% get_current_language as CURRENT_LANGUAGE %}
 {% get_available_languages as AVAILABLE_LANGUAGES %}
 {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
@@ -27,9 +28,9 @@
                     {% for language in languages %}
                     {% if language.code != CURRENT_LANGUAGE %}
                     {% if language.code == 'en' %}
-                    <li><a href="/{{ language.code }}/">🇺🇸 {{ language.name_local }}</a></li>
+                    <li><a href="/{{ language.code }}/{{ request.path|language_url:'en' }}">🇺🇸 {{ language.name_local }}</a></li>
                     {% elif language.code == 'tr' %}
-                    <li><a href="/{{ language.code }}/">🇹🇷 {{ language.name_local }}</a></li>
+                    <li><a href="/{{ language.code }}/{{ request.path|language_url:'tr' }}">🇹🇷 {{ language.name_local }}</a></li>
                     {% endif %}
                     {% endif %}
                     {% endfor %}
