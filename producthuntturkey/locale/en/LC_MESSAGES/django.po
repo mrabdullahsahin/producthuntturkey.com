@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-26 15:47+0300\n"
+"POT-Creation-Date: 2022-02-27 07:34+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -75,12 +75,11 @@ msgid "Submit"
 msgstr ""
 
 #: templates/city.html:36 templates/index.html:33
-#: templates/product-detail.html:25 templates/team-size.html:36
+#: templates/product-detail.html:24 templates/team-size.html:36
 msgid "Go"
 msgstr ""
 
-#: templates/city.html:39 templates/index.html:36
-#: templates/product-detail.html:28 templates/team-size.html:39
+#: templates/city.html:39 templates/index.html:36 templates/team-size.html:39
 msgid "View"
 msgstr ""
 
@@ -96,50 +95,55 @@ msgstr ""
 msgid "Number of Telegram Channel Subscribers"
 msgstr ""
 
-#: templates/partials/_github.html:8
+#: templates/partials/_github.html:5
 msgid "Product Hunt Turkey is an open source."
 msgstr ""
 
-#: templates/partials/_github.html:10
+#: templates/partials/_github.html:7
 msgid "Contribute on github!"
 msgstr ""
 
-#: templates/partials/_navbar.html:25
+#: templates/partials/_navbar.html:26 templates/partials/_navbar.html:28
 msgid "Home"
 msgstr ""
 
-#: templates/partials/_navbar.html:26
+#: templates/partials/_navbar.html:30
 msgid "Open Startup"
 msgstr ""
 
-#: templates/partials/_navbar.html:27
+#: templates/partials/_navbar.html:31
 msgid "Add Your Product"
 msgstr ""
 
-#: templates/product-detail.html:37
+#: templates/product-detail.html:32
 msgid "Developed in"
 msgstr ""
 
-#: templates/product-detail.html:42
+#: templates/product-detail.html:37
 msgid "Product Team Size"
 msgstr ""
 
-#: templates/product-detail.html:47
+#: templates/product-detail.html:42
 msgid "Visit on Product Hunt Page"
 msgstr ""
 
-#: templates/product-detail.html:52
+#: templates/product-detail.html:43 templates/product-detail.html:49
+#: templates/product-detail.html:57 templates/product-detail.html:64
+msgid "Visit"
+msgstr ""
+
+#: templates/product-detail.html:47
 msgid "Visit on Product Website"
 msgstr ""
 
-#: templates/product-detail.html:59
+#: templates/product-detail.html:55
 msgid "Visit on Product Twitter Profile"
 msgstr ""
 
-#: templates/product-detail.html:65
+#: templates/product-detail.html:62
 msgid "Visit on Product Owner Twitter Profile"
 msgstr ""
 
-#: templates/product-detail.html:71
+#: templates/product-detail.html:69
 msgid "Total of Votes"
 msgstr ""
