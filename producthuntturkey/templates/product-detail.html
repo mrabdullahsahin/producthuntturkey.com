@@ -19,15 +19,10 @@
                 <h2 class="info-title">{{product.product_name}}</h2>
                 <p class="info-description">{{product.product_description}}</p>
             </div>
-            <div>
-                <a class="support" href="{{product.product_ph_link}}?ref=producthuntturkey.com" target="_blank"
-                    rel="noopener noreferrer">
-                    <button class="support-button">{% trans "Go" %}</button>
-                </a>
-                <a class="support" href="{% url 'product_detail' product.slug %}">
-                    <button class="support-button">{% trans "View" %}</button>
-                </a>
-            </div>
+            <a class="support" href="{{product.product_ph_link}}?ref=producthuntturkey.com" target="_blank"
+                rel="noopener noreferrer">
+                <button class="support-button">{% trans "Go" %}</button>
+            </a>
         </article>
     </section>
 </div>
@@ -50,20 +45,23 @@
     {% if product.product_website != None %}
     <div class="product-info">
         <h2 class="product-info-title">{% trans "Visit on Product Website" %}</h2>
-        <a class="product-info-content" href="{{ product.product_website }}?ref=producthuntturkey.com" target="_blank">Visit</a>
+        <a class="product-info-content" href="{{ product.product_website }}?ref=producthuntturkey.com"
+            target="_blank">Visit</a>
     </div>
     {% endif %}
 
     {% if product.product_twitter %}
     <div class="product-info">
         <h2 class="product-info-title">{% trans "Visit on Product Twitter Profile" %}</h2>
-        <a class="product-info-content" href="{{ product.product_twitter }}?ref=producthuntturkey.com" target="_blank">Visit</a>
+        <a class="product-info-content" href="{{ product.product_twitter }}?ref=producthuntturkey.com"
+            target="_blank">Visit</a>
     </div>
     {% endif %}
     {% if product.product_owner_twitter %}
     <div class="product-info">
         <h2 class="product-info-title">{% trans "Visit on Product Owner Twitter Profile" %}</h2>
-        <a class="product-info-content" href="{{ product.product_owner_twitter }}?ref=producthuntturkey.com" target="_blank">Visit</a>
+        <a class="product-info-content" href="{{ product.product_owner_twitter }}?ref=producthuntturkey.com"
+            target="_blank">Visit</a>
     </div>
     {% endif %}
     {% if product.product_hunt_votes > 0 %}
