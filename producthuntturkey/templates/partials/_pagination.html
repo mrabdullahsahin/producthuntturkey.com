@@ -1,0 +1,39 @@
+{% if products.has_other_pages %}
+<ul class="pagination">
+    {% if products.has_previous %}
+    <a href="?page={{ products.previous_page_number }}" class="pagination-items">
+        <li class="pagination-item">
+            &laquo;
+        </li>
+    </a>
+    {% else %}
+    <li class="pagination-items pagination-disabled">
+        <span class="pagination-item">&laquo;</span>
+    </li>
+    {% endif %}
+    {% for i in products.paginator.page_range %}
+    {% if products.number == i %}
+    <li class="pagination-items pagination-active">
+        <span class="pagination-item">{{ i }}</span>
+    </li>
+    {% else %}
+    <a href="?page={{ i }}" class="pagination-items">
+        <li class="pagination-item">
+            {{ i }}
+        </li>
+    </a>
+    {% endif %}
+    {% endfor %}
+    {% if products.has_next %}
+    <a href="?page={{ products.next_page_number }}" class="pagination-items">
+        <li class="pagination-item">
+            &raquo;
+        </li>
+    </a>
+    {% else %}
+    <li class="pagination-items pagination-disabled">
+        <span class="pagination-item">&raquo;</span>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
