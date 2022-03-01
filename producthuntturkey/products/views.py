@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from . models import Product, City, TeamSize
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def index(request, product_slug=None, city_slug=None, teamsize_slug=None):
     if product_slug != None:
@@ -36,7 +37,16 @@ def index(request, product_slug=None, city_slug=None, teamsize_slug=None):
         return render(request, 'team-size.html', context)
 
     else:
-        products = Product.objects.filter(is_avaliable=True).order_by('-product_launch_date')
+        products_list = Product.objects.filter(is_avaliable=True).order_by('-product_launch_date').all()
+        page = request.GET.get('page', 1)
+
+        paginator = Paginator(products_list, 3)
+        try:
+            products = paginator.page(page)
+        except PageNotAnInteger:
+            products = paginator.page(1)
+        except EmptyPage:
+            products = paginator.page(paginator.num_pages)
 
         context = {
             'products': products
