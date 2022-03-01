@@ -15,7 +15,17 @@ def index(request, product_slug=None, city_slug=None, teamsize_slug=None):
     elif city_slug != None:
         city_page = get_object_or_404(City, slug=city_slug)
         city =  City.objects.get(slug=city_slug)
-        products = Product.objects.all().filter(is_avaliable=True, product_city = city_page).order_by('-product_launch_date')
+        products_list = Product.objects.all().filter(is_avaliable=True, product_city = city_page).order_by('-product_launch_date').all()
+
+        page = request.GET.get('page', 1)
+
+        paginator = Paginator(products_list, 3)
+        try:
+            products = paginator.page(page)
+        except PageNotAnInteger:
+            products = paginator.page(1)
+        except EmptyPage:
+            products = paginator.page(paginator.num_pages)         
 
         context = {
             'products': products,
