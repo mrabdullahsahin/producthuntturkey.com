@@ -26,10 +26,14 @@
                 <h2 class="info-title">{{product.product_name}}</h2>
                 <p class="info-description">{{product.product_description}}</p>
                 <div>
+                    {% if product.product_city != None %}
                     <span><a href="{% url 'city-list' product.product_city.slug %}">🇹🇷
                             {{product.product_city}}</a></span>
+                    {% endif %}
+                    {% if product.product_team_size != None %}
                     <span><a href="{% url 'team-size-list' product.product_team_size.slug %}">🧑‍💼
                             {{product.product_team_size}}</a></span>
+                    {% endif %}
                 </div>
             </div>
             <div>
