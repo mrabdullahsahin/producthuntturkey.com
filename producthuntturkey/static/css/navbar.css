@@ -39,7 +39,7 @@ ul {
     padding: 0 15px;
 }
 
-li > a {
+li>a {
     color: black;
     text-transform: capitalize;
 }

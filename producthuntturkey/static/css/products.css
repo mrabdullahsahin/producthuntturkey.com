@@ -41,7 +41,7 @@
     color: white;
 }
 
-span > a {
+span>a {
     color: black;
     text-decoration: none;
 }
@@ -50,7 +50,7 @@ span > a {
     color: white;
 }
 
-span > a:hover {
+span>a:hover {
     text-decoration: underline;
 }
 
@@ -132,7 +132,7 @@ span > a:hover {
     font-size: 25px;
 }
 
-.pagination{
+.pagination {
     display: flex;
     align-content: center;
     flex-direction: row;
@@ -141,12 +141,12 @@ span > a:hover {
     padding-bottom: 15px;
 }
 
-.pagination > a {
+.pagination>a {
     text-decoration: none;
     color: black;
 }
 
-.pagination-items{
+.pagination-items {
     display: flex;
     align-items: center;
     align-content: center;
@@ -160,7 +160,7 @@ span > a:hover {
     background-color: white;
 }
 
-.pagination-items:not(:last-child){
+.pagination-items:not(:last-child) {
     margin-right: 11px;
 }
 
@@ -168,12 +168,12 @@ span > a:hover {
     margin: auto;
 }
 
-.pagination-active{
+.pagination-active {
     background-color: black;
     color: white;
 }
 
-.pagination-disabled{
+.pagination-disabled {
     background-color: white;
     color: black;
     border: none;

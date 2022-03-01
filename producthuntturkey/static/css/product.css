@@ -159,7 +159,7 @@ span>a:hover {
     margin-top: 30px;
 }
 
-.product-info>a:hover{
+.product-info>a:hover {
     text-decoration: underline;
 }
 
@@ -223,22 +223,22 @@ span>a:hover {
         margin-top: 5px;
     }
 
-    .product-info-container{
+    .product-info-container {
         width: 98%;
     }
 
-    .product-info{
+    .product-info {
         width: 150px;
         height: 150px;
         margin-top: 15px;
     }
 
-    .product-info-title{
+    .product-info-title {
         font-size: 12px;
         line-height: 11px;
     }
 
-    .product-info-content{
+    .product-info-content {
         font-weight: 800;
         font-size: 25px;
     }
