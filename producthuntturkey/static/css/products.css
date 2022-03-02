@@ -164,6 +164,12 @@ span>a:hover {
     margin-right: 11px;
 }
 
+.pagination-items:not(.pagination-disabled):hover {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+}
+
 .pagination-item {
     margin: auto;
 }
