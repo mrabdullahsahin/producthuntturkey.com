@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'addyourstartup.apps.AddyourstartupConfig',
     'rosetta',
     'parler',
+    "captcha"
 ]
 
 MIDDLEWARE = [

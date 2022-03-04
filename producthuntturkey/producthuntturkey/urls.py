@@ -26,4 +26,5 @@ urlpatterns = i18n_patterns(
     path('', include('products.urls')),
     path('', include('openstartup.urls')),
     path('', include('addyourstartup.urls')),
+    path('captcha',include("captcha.urls")),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

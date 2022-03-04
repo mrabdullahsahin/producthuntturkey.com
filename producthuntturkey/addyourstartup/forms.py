@@ -2,6 +2,7 @@ from django.forms import ModelForm
 from django import forms
 from .models import AddYourStartupArea
 from products.models import City, TeamSize
+from captcha.fields import CaptchaField
 
 class AddYourStartupForm(ModelForm):
     product_name = forms.CharField(max_length = 250, required=True)
@@ -15,7 +16,8 @@ class AddYourStartupForm(ModelForm):
     product_picture = forms.ImageField(required=True, widget=forms.FileInput(attrs={'accept': '.gif, .jpg, .jpeg, .png'}))
     product_city = forms.ModelChoiceField(queryset=City.objects.all(), required=True)
     product_launch_date = forms.DateField(required=True, widget=forms.DateInput(attrs={'type': 'date'}))
+    captcha = CaptchaField()
 
     class Meta:
         model = AddYourStartupArea
-        fields = ['product_name', 'product_about_tr', 'product_about_en', 'product_twitter', 'product_owner_twitter', 'product_ph_link', 'product_website', 'product_team_size', 'product_picture', 'product_city', 'product_launch_date']
+        fields = ['product_name', 'product_about_tr', 'product_about_en', 'product_twitter', 'product_owner_twitter', 'product_ph_link', 'product_website', 'product_team_size', 'product_picture', 'product_city', 'product_launch_date','captcha']
