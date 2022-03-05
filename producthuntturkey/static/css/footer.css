@@ -3,7 +3,7 @@ footer{
     align-items: center;
     align-content: center;
     justify-content: center;
-    height:55px;
+    height:auto;
     width:100%;
     background:black;
 }
