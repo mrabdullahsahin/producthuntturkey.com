@@ -25,11 +25,13 @@
 </head>
 
 <body>
-    {% include 'partials/_github.html' %}
-    {% include 'partials/_navbar.html' %}
-    {% include 'partials/_developer.html' %}
-    {% block content %}
-    {% endblock content %}
+    <main>
+        {% include 'partials/_github.html' %}
+        {% include 'partials/_navbar.html' %}
+        {% include 'partials/_developer.html' %}
+        {% block content %}
+        {% endblock content %}
+    </main>
     {% include 'partials/_footer.html' %}
     {% block js %}
     {% endblock js %}
