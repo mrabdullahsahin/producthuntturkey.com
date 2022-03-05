@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{% static 'css/developer.css' %}">
     <link rel="stylesheet" href="{% static 'css/social-media.css' %}">
     <link rel="stylesheet" href="{% static 'css/github.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     {% block css %}
     {% endblock css %}
     <title>Product Hunt Turkey</title>
@@ -29,6 +30,7 @@
     {% include 'partials/_developer.html' %}
     {% block content %}
     {% endblock content %}
+    {% include 'partials/_footer.html' %}
     {% block js %}
     {% endblock js %}
 </body>

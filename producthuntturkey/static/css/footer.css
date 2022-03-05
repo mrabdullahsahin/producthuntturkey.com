@@ -1,0 +1,18 @@
+footer{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height:55px;
+    width:100%;
+    background:black;
+}
+
+.footer__info{
+    color: white;
+}
+
+.footer__link{
+    color: white;
+    text-decoration: underline;
+}
