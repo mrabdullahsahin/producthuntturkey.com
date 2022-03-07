@@ -1,3 +1,8 @@
+{% load i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% get_available_languages as AVAILABLE_LANGUAGES %}
+{% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
+
 <footer>
     <p class="footer__info">© 2020-<script>document.write(new Date().getFullYear())</script>. Product Hunt Turkey®. By using this site, you agree to our <a href="" class="footer__link">terms of service</a> and <a href="" class="footer__link">privacy policy</a>. Made by <a href="" class="footer__link">mrabdullahsahin</a>.
     </p>
