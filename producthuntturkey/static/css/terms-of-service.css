@@ -1,0 +1,16 @@
+.terms-of-service {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    background: #FFFFFF;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+@media (max-width: 900px) {
+    .terms-of-service {
+        width: 98%;
+    }
+}
