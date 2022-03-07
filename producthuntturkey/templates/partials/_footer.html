@@ -4,12 +4,12 @@
 {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
 {% if CURRENT_LANGUAGE == 'en' %}
 <footer>
-    <p class="footer__info">© 2020-<script>document.write(new Date().getFullYear())</script>. Product Hunt Turkey®. By using this site, you agree to our <a href="" class="footer__link">terms of service</a> and <a href="{% url 'privacy-policy' %}" class="footer__link">privacy policy</a>.
+    <p class="footer__info">© 2020-<script>document.write(new Date().getFullYear())</script>. Product Hunt Turkey®. By using this site, you agree to our <a href="{% url 'terms-of-service' %}" class="footer__link">terms of service</a> and <a href="{% url 'privacy-policy' %}" class="footer__link">privacy policy</a>.
     </p>
 </footer>
 {% elif CURRENT_LANGUAGE == 'tr' %}
 <footer>
-    <p class="footer__info">© 2020-<script>document.write(new Date().getFullYear())</script>. Product Hunt Turkey®. Bu siteyi kullanarak <a href="" class="footer__link">hizmet şartlarımızı</a> ve <a href="{% url 'privacy-policy' %}" class="footer__link">gizlilik politikamızı</a> kabul etmiş olursunuz.
+    <p class="footer__info">© 2020-<script>document.write(new Date().getFullYear())</script>. Product Hunt Turkey®. Bu siteyi kullanarak <a href="{% url 'terms-of-service' %}" class="footer__link">hizmet şartlarımızı</a> ve <a href="{% url 'privacy-policy' %}" class="footer__link">gizlilik politikamızı</a> kabul etmiş olursunuz.
     </p>
 </footer>
 {% endif %}
