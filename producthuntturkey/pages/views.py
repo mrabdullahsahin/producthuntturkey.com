@@ -5,3 +5,6 @@ def privacy_policy(request):
 
 def terms_of_service(request):
     return render(request, 'terms-of-service.html')
+
+def ambassadors(request):
+    return render(request, 'ambassadors.html')
