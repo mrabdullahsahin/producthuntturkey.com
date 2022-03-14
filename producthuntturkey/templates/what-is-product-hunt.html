@@ -1,0 +1,23 @@
+{% extends 'partials/_base.html' %}
+{% load i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% get_available_languages as AVAILABLE_LANGUAGES %}
+{% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/what.css' %}">
+{% endblock css %}
+
+{% block content %}
+{% include 'partials/_social-media.html' %}
+{% if CURRENT_LANGUAGE == 'en' %}
+<article class="what-is">
+    <h1>What is Product Hunt?</h1>
+</article>
+{% elif CURRENT_LANGUAGE == 'tr' %}
+<article class="what-is">
+    <h1>Product Hunt Nedir?</h1>
+</article>
+{% endif %}
+{% endblock content %}
