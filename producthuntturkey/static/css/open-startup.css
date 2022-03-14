@@ -2,6 +2,7 @@
   display: flex;
   align-content: center;
   justify-content: center;
+  align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
   width: 95%;
@@ -22,10 +23,7 @@
   height: 150px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   margin-top: 30px;
-}
-
-.Metric:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 25px;
 }
 
 .MetricTitle {
