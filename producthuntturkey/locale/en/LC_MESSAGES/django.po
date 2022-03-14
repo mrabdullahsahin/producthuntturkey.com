@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-27 07:34+0300\n"
+"POT-Creation-Date: 2022-03-14 19:45+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: producthuntturkey/settings.py:123
+#: producthuntturkey/settings.py:125
 msgid "English"
 msgstr "English"
 
-#: producthuntturkey/settings.py:124
+#: producthuntturkey/settings.py:126
 msgid "Turkish"
 msgstr "Turkish"
 
@@ -70,16 +70,16 @@ msgstr ""
 msgid "Product English Description"
 msgstr ""
 
-#: templates/add-your-startup.html:89
-msgid "Submit"
+#: templates/add-your-startup.html:103
+msgid " Submit"
 msgstr ""
 
-#: templates/city.html:36 templates/index.html:33
-#: templates/product-detail.html:24 templates/team-size.html:36
+#: templates/city.html:42 templates/index.html:38
+#: templates/product-detail.html:24 templates/team-size.html:42
 msgid "Go"
 msgstr ""
 
-#: templates/city.html:39 templates/index.html:36 templates/team-size.html:39
+#: templates/city.html:45 templates/index.html:41 templates/team-size.html:45
 msgid "View"
 msgstr ""
 
@@ -103,15 +103,19 @@ msgstr ""
 msgid "Contribute on github!"
 msgstr ""
 
-#: templates/partials/_navbar.html:26 templates/partials/_navbar.html:28
+#: templates/partials/_navbar.html:28 templates/partials/_navbar.html:34
 msgid "Home"
 msgstr ""
 
-#: templates/partials/_navbar.html:30
+#: templates/partials/_navbar.html:40
+msgid "Ambassadors"
+msgstr ""
+
+#: templates/partials/_navbar.html:45
 msgid "Open Startup"
 msgstr ""
 
-#: templates/partials/_navbar.html:31
+#: templates/partials/_navbar.html:50
 msgid "Add Your Product"
 msgstr ""
 
