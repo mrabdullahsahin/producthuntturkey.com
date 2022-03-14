@@ -8,7 +8,7 @@
     margin: auto;
     font-weight: bold;
     font-size: 1.2em;
-    margin-left: 17.5%;
+    margin-left: 3%;
     margin-top: 25px;
     margin-bottom: 10px;
 }
@@ -139,7 +139,7 @@ span>a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 65%;
+    width: 95%;
     margin-top: 7px;
     margin-right: auto;
     margin-left: auto;
