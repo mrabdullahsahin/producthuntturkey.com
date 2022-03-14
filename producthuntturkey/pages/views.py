@@ -8,3 +8,6 @@ def terms_of_service(request):
 
 def ambassadors(request):
     return render(request, 'ambassadors.html')
+
+def what_is(request):
+    return render(request, 'what-is-product-hunt.html')
