@@ -1,8 +1,7 @@
 .ambassador-title{
     display: flex;
-    align-content: center;
     flex-direction: column;
-    flex-wrap: wrap;
+    align-items: center;
     width: 95%;
     margin-top: 10px;
     margin-right: auto;
@@ -63,4 +62,15 @@
     display: flex;
     margin-left: 3px;
     margin-bottom: 3px;
+}
+
+@media (max-width: 900px) {
+    .ambassador-title{
+        width: 98%;
+        font-size: 21px;
+    }
+
+    .ambassador-list{
+        width: 98%;
+    }
 }
