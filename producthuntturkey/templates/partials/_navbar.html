@@ -39,7 +39,12 @@
                         <a href="{% url 'ambassadors' %}" class="{% if '/ambassadors' in request.path %}active{% endif %}">
                             {% trans "Ambassadors" %}
                         </a>
-                    </li>                    
+                    </li> 
+                    <li>
+                        <a href="{% url 'what-is' %}" class="{% if '/what-is-product-hunt' in request.path %}active{% endif %}">
+                            {% trans "What is?" %}
+                        </a>
+                    </li>                                        
                     <li>
                         <a href="{% url 'open-startup' %}" class="{% if '/open-startup' in request.path %}active{% endif %}">
                             {% trans "Open Startup" %}
