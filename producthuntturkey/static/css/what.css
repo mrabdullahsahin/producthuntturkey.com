@@ -1,0 +1,16 @@
+.what-is {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    background: #FFFFFF;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+@media (max-width: 900px) {
+    .what-is {
+        width: 98%;
+    }
+}
