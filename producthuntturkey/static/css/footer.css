@@ -1,18 +1,18 @@
-footer{
+footer {
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
-    height:auto;
-    width:100%;
-    background:black;
+    height: auto;
+    width: 100%;
+    background: black;
 }
 
-.footer__info{
+.footer__info {
     color: white;
 }
 
-.footer__link{
+.footer__link {
     color: white;
     text-decoration: underline;
 }
