@@ -4,7 +4,7 @@ from products.models import City
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def show_event(request, event_slug=None, event_city_slug=None):
-    if product_slug != None:
+    if event_slug != None:
         pass
 
     elif event_city_slug != None:
