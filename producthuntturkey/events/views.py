@@ -5,7 +5,13 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def show_event(request, event_slug=None, event_city_slug=None):
     if event_slug != None:
-        pass
+        event = Event.objects.get(slug = event_slug)
+
+        context = {
+            'event': event
+        }
+
+        return render(request, 'event-detail.html', context)
 
     elif event_city_slug != None:
         pass
