@@ -1,0 +1,49 @@
+{% extends 'partials/_base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/events.css' %}">
+{% endblock css %}
+
+{% block content %}
+{% include 'partials/_social-media.html' %}
+<div class="filter">
+    <h1 class="filter-item">Events in {{ city.city }}</h1>
+</div>
+<div class="event-section">
+  {% regroup events by event_date as events_list %}
+  {% for events in events_list %}
+  <time class="event-time">{{events.grouper}}</time>
+  {% for event in events.list %}
+  <section class="event-list">
+    <article class="event-list-data">
+      <figure>
+        <img class="event-picture" src="{{event.event_picture.url}}" alt="product-hunt-turkey-{{event.slug}}" />
+      </figure>
+      <div class="event-info">
+        <h2 class="event-info-title">{{event.event_name}}</h2>
+        <div>
+          {% if event.event_city != None %}
+          <span><a href="{% url 'events-city-list' event.event_city.slug %}">🇹🇷
+              {{event.event_city}}</a></span>
+          {% endif %}
+        </div>
+      </div>
+      <div>
+        <a class="event-view" href="{{event.event_link}}" target="_blank"
+          rel="noopener noreferrer">
+          <button class="event-view-button">{% trans "Go" %}</button>
+        </a>
+        <a class="event-view" href="{% url 'event-detail' event.slug %}">
+          <button class="event-view-button">{% trans "View" %}</button>
+        </a>
+      </div>
+    </article>
+  </section>
+  {% endfor %}
+  {% endfor %}
+</div>
+
+{% include 'partials/_pagination.html' %}
+{% endblock content %}
