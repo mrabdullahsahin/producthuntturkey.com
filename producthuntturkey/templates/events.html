@@ -22,7 +22,7 @@
         <h2 class="event-info-title">{{event.event_name}}</h2>
         <div>
           {% if event.event_city != None %}
-          <span><a href="">🇹🇷
+          <span><a href="{% url 'events-city-list' event.event_city.slug %}">🇹🇷
               {{event.event_city}}</a></span>
           {% endif %}
         </div>
