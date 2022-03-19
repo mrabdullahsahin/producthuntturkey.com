@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'rosetta',
     'parler',
     "captcha",
-    'pages.apps.PagesConfig'
+    'pages.apps.PagesConfig',
+    'events.apps.EventsConfig'
 ]
 
 MIDDLEWARE = [
