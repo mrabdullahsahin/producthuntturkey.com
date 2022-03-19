@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-14 20:46+0300\n"
+"POT-Creation-Date: 2022-03-19 19:37+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: producthuntturkey/settings.py:125
+#: producthuntturkey/settings.py:126
 msgid "English"
 msgstr "İngilizce"
 
-#: producthuntturkey/settings.py:126
+#: producthuntturkey/settings.py:127
 msgid "Turkish"
 msgstr "Türkçe"
 
@@ -80,12 +80,13 @@ msgstr "Gönder"
 msgid "Product Hunt Ambassadors of 🇹🇷 Turkey"
 msgstr "Product Hunt'ın 🇹🇷 Türkiy'e Elçileri"
 
-#: templates/city.html:42 templates/index.html:38
+#: templates/city.html:42 templates/events.html:33 templates/index.html:38
 #: templates/product-detail.html:24 templates/team-size.html:42
 msgid "Go"
 msgstr "Git"
 
-#: templates/city.html:45 templates/index.html:41 templates/team-size.html:45
+#: templates/city.html:45 templates/events.html:36 templates/index.html:41
+#: templates/team-size.html:45
 msgid "View"
 msgstr "Görüntüle"
 
@@ -114,18 +115,22 @@ msgid "Home"
 msgstr "Anasayfa"
 
 #: templates/partials/_navbar.html:40
+msgid "Events"
+msgstr "Etkinlikler"
+
+#: templates/partials/_navbar.html:45
 msgid "Ambassadors"
 msgstr "Elçiler"
 
-#: templates/partials/_navbar.html:45
+#: templates/partials/_navbar.html:50
 msgid "What is?"
 msgstr "Nedir?"
 
-#: templates/partials/_navbar.html:50
+#: templates/partials/_navbar.html:55
 msgid "Open Startup"
 msgstr "Açık Girişim"
 
-#: templates/partials/_navbar.html:55
+#: templates/partials/_navbar.html:60
 msgid "Add Your Product"
 msgstr "Girişimini Ekle"
 
