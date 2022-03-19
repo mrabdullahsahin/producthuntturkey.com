@@ -16,7 +16,7 @@
   <section class="event-list">
     <article class="event-list-data">
       <figure>
-        <img class="event-picture" src="{{event.event_picture.url}}" alt="product-hunt-turkey-{{event.event_slug}}" />
+        <img class="event-picture" src="{{event.event_picture.url}}" alt="product-hunt-turkey-{{event.slug}}" />
       </figure>
       <div class="event-info">
         <h2 class="event-info-title">{{event.event_name}}</h2>
@@ -32,7 +32,7 @@
           rel="noopener noreferrer">
           <button class="event-view-button">{% trans "Go" %}</button>
         </a>
-        <a class="event-view" href="">
+        <a class="event-view" href="{% url 'event-detail' event.slug %}">
           <button class="event-view-button">{% trans "View" %}</button>
         </a>
       </div>

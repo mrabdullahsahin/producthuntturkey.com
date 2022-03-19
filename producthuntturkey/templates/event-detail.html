@@ -1,0 +1,36 @@
+{% extends 'partials/_base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/event-detail.css' %}">
+{% endblock css %}
+
+{% block content %}
+<div class="event-section">
+    <time class="event-time">{{event.event_date}}</time>
+    <section class="event-list">
+        <article class="event-list-data">
+            <figure>
+                <img class="event-picture" src="{{event.event_picture.url}}"
+                    alt="product-hunt-turkey-{{event.slug}}" />
+            </figure>
+            <div class="event-info">
+                <h2 class="event-info-title">{{event.event_name}}</h2>
+                {% if event.event_city != None %}
+                <span><a href="">🇹🇷
+                    {{event.event_city}}</a></span>
+                {% endif %}
+            </div>
+            <a class="event-links" href="{{event.event_link}}?ref=producthuntturkey.com" target="_blank"
+                rel="noopener noreferrer">
+                <button class="event-go-button">{% trans "Go" %}</button>
+            </a>
+        </article>
+    </section>
+</div>
+
+<div class="event-description-section">
+    {{event.event_description}}
+</div>
+{% endblock content %}
