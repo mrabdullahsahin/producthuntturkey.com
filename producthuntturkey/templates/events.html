@@ -20,10 +20,9 @@
       </figure>
       <div class="event-info">
         <h2 class="event-info-title">{{event.event_name}}</h2>
-        <p class="event-info-description">{{event.event_description}}</p>
         <div>
           {% if event.event_city != None %}
-          <span><a href="{% url 'event-city-list' event.event_city.slug %}">🇹🇷
+          <span><a href="">🇹🇷
               {{event.event_city}}</a></span>
           {% endif %}
         </div>
@@ -33,7 +32,7 @@
           rel="noopener noreferrer">
           <button class="event-view-button">{% trans "Go" %}</button>
         </a>
-        <a class="event-view" href="{% url 'event_detail' event.slug %}">
+        <a class="event-view" href="">
           <button class="event-view-button">{% trans "View" %}</button>
         </a>
       </div>
