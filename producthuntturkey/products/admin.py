@@ -53,6 +53,20 @@ def send_to_telegram(self, request, queryset):
                 request,"Bu ürünü telegramda yayınlayabilmek için önce onaylamanız gerekmektedir."
             )
 
+@admin.action(description='Ürünü Onayla')
+def accept_to_product(self, request, queryset):
+    for product in queryset:
+        if product.is_avaliable == False:
+            product.is_avaliable = True
+            product.save()
+            self.message_user(
+                request,"Ürün başarılı bir şekilde onaylandı.",
+            )
+        else:
+            self.message_user(
+                request,"Ürün onaylanamadı.",
+            )
+
 @admin.register(City)
 class CityAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('city',)}
@@ -66,6 +80,6 @@ class ProductAdmin(TranslatableAdmin):
     list_filter = ('is_avaliable','product_city','product_team_size')
     search_fields = ('product_name','product_description')
     prepopulated_fields = {'slug': ('product_name',)}
-    actions = [send_to_telegram]
+    actions = [send_to_telegram,accept_to_product]
 
 admin.site.register(Product, ProductAdmin)
