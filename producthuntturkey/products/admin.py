@@ -67,6 +67,20 @@ def accept_to_product(self, request, queryset):
                 request,"Ürün onaylanamadı.",
             )
 
+@admin.action(description='Ürünün Onayını Kaldır')
+def unaccept_to_product(self, request, queryset):
+    for product in queryset:
+        if product.is_avaliable:
+            product.is_avaliable = False
+            product.save()
+            self.message_user(
+                request,"Ürünün onayı başarılı bir şekilde kaldırıldı.",
+            )
+        else:
+            self.message_user(
+                request,"Ürünün onayı kaldırılamadı.",
+            )
+
 @admin.register(City)
 class CityAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('city',)}
@@ -80,6 +94,6 @@ class ProductAdmin(TranslatableAdmin):
     list_filter = ('is_avaliable','product_city','product_team_size')
     search_fields = ('product_name','product_description')
     prepopulated_fields = {'slug': ('product_name',)}
-    actions = [send_to_telegram,accept_to_product]
+    actions = [send_to_telegram,accept_to_product,unaccept_to_product]
 
 admin.site.register(Product, ProductAdmin)
