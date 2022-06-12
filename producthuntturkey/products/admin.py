@@ -90,7 +90,7 @@ class TeamSize(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('size',)}
 
 class ProductAdmin(TranslatableAdmin):
-    list_display = ('product_name', 'slug', 'product_city','is_avaliable','is_published_telegram', 'product_launch_date')
+    list_display = ('product_name', 'slug', 'product_city','is_avaliable','is_published_telegram','is_published_mail','product_launch_date')
     list_filter = ('is_avaliable','product_city','product_team_size')
     search_fields = ('product_name','product_description')
     prepopulated_fields = {'slug': ('product_name',)}
