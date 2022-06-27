@@ -1,0 +1,61 @@
+{% load i18n %}
+{% load static %}
+
+<article class="newsletter">
+    {% get_current_language as CURRENT_LANGUAGE %}
+    {% if CURRENT_LANGUAGE == 'en' %}
+    <h2 class="newsletter-title">Subscribe to Product Hunt Turkey Newsletter</h2>
+    <div id="revue-embed">
+        <form action="https://www.getrevue.co/profile/producthuntturkey/add_subscriber" method="post" id="revue-form"
+            name="revue-form" target="_blank">
+            <div class="revue-form-group">
+                <input class="revue-form-field" placeholder="Email address" type="email" name="member[email]"
+                    id="member_email">
+            </div>
+            <div class="revue-form-group">
+                <input class="revue-form-field" placeholder="First name" type="text"
+                    name="member[first_name]" id="member_first_name">
+            </div>
+            <div class="revue-form-group">
+                <input class="revue-form-field" placeholder="Last name" type="text"
+                    name="member[last_name]" id="member_last_name">
+            </div>
+            <div class="revue-form-actions">
+                <input type="submit" value="Subscribe" name="member[subscribe]" id="member_submit">
+            </div>
+        </form>
+        <div class="revue-form-footer">By subscribing, you agree with Revue’s <a target="_blank"
+            href="https://www.getrevue.co/terms">Terms of Service</a> and <a target="_blank"
+            href="https://www.getrevue.co/privacy">Privacy Policy</a>.</div>
+    </div>
+    {% elif CURRENT_LANGUAGE == 'tr' %}
+    <h2 class="newsletter-title">Ülkemizden Product Hunt'a çıkan ürünlerden anında haberdar olmak için sende mail
+        listemize abone ol.</h2>
+    <div id="revue-embed">
+        <form action="https://www.getrevue.co/profile/producthuntturkey/add_subscriber" method="post" id="revue-form"
+            name="revue-form" target="_blank">
+            <div class="revue-form-group">
+                <input class="revue-form-field" placeholder="Mail Adresiniz" type="email" name="member[email]"
+                    id="member_email">
+            </div>
+            <div class="revue-form-group">
+                <input class="revue-form-field" placeholder="Adınız" type="text" name="member[first_name]"
+                    id="member_first_name">
+            </div>
+            <div class="revue-form-group">
+                <input class="revue-form-field" placeholder="Soyadınız" type="text" name="member[last_name]"
+                    id="member_last_name">
+            </div>
+            <div class="revue-form-actions">
+                <input type="submit" value="Abone Ol" name="member[subscribe]" id="member_submit">
+            </div>
+        </form>
+        <div class="revue-form-footer">Abone olarak Revue'nin
+            <a target="_blank" href="https://www.getrevue.co/terms?locale=tr"> Hizmet Koşullarını
+            </a> ve
+            <a target="_blank" href="https://www.getrevue.co/privacy?locale=tr"> Gizlilik Politikasını
+            </a> kabul etmiş olursunuz.
+        </div>
+    </div>
+    {% endif %}
+</article>

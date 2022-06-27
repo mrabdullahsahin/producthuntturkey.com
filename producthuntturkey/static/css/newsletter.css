@@ -1,0 +1,96 @@
+.newsletter {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 95%;
+    background: #FFFFFF;
+    margin: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.newsletter-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#revue-embed {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#revue-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.revue-form-group {
+    display: flex;
+    margin-right: 10px;
+}
+
+.revue-form-field {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+#member_submit{
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    width: 100%;
+}
+
+.revue-form-footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .newsletter{
+        width: 98%;
+    }
+
+    .newsletter-title {
+        font-size: 15px;
+    }
+
+    #revue-form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .revue-form-group {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    
+    .revue-form-actions{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .revue-form-field {
+        margin-bottom: 5px;
+    }
+}
