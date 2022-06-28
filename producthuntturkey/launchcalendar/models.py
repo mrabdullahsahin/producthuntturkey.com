@@ -1,18 +1,20 @@
 from django.db import models
+from parler.models import TranslatableModel, TranslatedFields
 from products.models import City, TeamSize
 from django.utils.text import slugify
 from datetime import datetime
 
 STATUS_CHOICES = [
     ('w', 'İnceleme Bekliyor'),
-    ('p', 'Product Tablosuna Eklendi'),
-    ('d', 'Yayınlama'),
+    ('p', 'Onaylandı'),
+    ('d', 'Yayınlanmayacak'),
 ]
-class LaunchCalendar(models.Model):
+class LaunchCalendar(TranslatableModel):
+    translations = TranslatedFields(
+        product_description = models.TextField(blank=True, null=True),
+    )
     product_name = models.CharField(max_length=250, null=True, blank=True)
     slug = models.SlugField(max_length=250, unique=True, null=True)
-    product_about_tr = models.TextField(null=True, blank=True)
-    product_about_en = models.TextField(null=True, blank=True)
     product_twitter = models.CharField(max_length=250, null=True, blank=True)
     product_owner_twitter = models.CharField(max_length=250, null=True, blank=True)
     product_ph_link = models.CharField(max_length=250, null=True, blank=True)
