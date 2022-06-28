@@ -16,7 +16,7 @@ class AddYourStartupForm(ModelForm):
     product_picture = forms.ImageField(required=True, widget=forms.FileInput(attrs={'accept': '.gif, .jpg, .jpeg, .png'}))
     product_city = forms.ModelChoiceField(queryset=City.objects.all(), required=True)
     product_launch_date = forms.DateField(required=True, widget=forms.DateInput(attrs={'type': 'date', 'id': 'launch_date'}))
-    product_future_launch_date = forms.DateField(required=True, widget=forms.DateInput(attrs={'type': 'date'}))
+    product_future_launch_date = forms.DateField(required=True, widget=forms.DateInput(attrs={'type': 'date', 'id': 'future_launch_date'}))
     captcha = CaptchaField()
 
     class Meta:
