@@ -18,6 +18,7 @@ class AddYourStartupArea(models.Model):
     product_ph_link = models.CharField(max_length=250, null=True, blank=True)
     product_website = models.CharField(max_length=250, null=True, blank=True)
     product_launch_date = models.DateField(null=True, blank=True)
+    product_future_launch_date = models.DateField(null=True, blank=True)
     product_team_size = models.ForeignKey(TeamSize, on_delete=models.DO_NOTHING, null=True, blank=True)
     def get_filepath(instance, filename):
         fname, dot, extension = filename.rpartition('.')
