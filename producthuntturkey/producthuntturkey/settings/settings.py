@@ -50,8 +50,7 @@ INSTALLED_APPS = [
     'parler',
     "captcha",
     'pages.apps.PagesConfig',
-    'events.apps.EventsConfig',
-    'launchcalendar.apps.LaunchcalendarConfig'
+    'events.apps.EventsConfig'
 ]
 
 MIDDLEWARE = [
