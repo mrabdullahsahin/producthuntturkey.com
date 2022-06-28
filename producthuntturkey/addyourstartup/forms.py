@@ -15,7 +15,7 @@ class AddYourStartupForm(ModelForm):
     product_team_size = forms.ModelChoiceField(queryset=TeamSize.objects.all(), required=True)
     product_picture = forms.ImageField(required=True, widget=forms.FileInput(attrs={'accept': '.gif, .jpg, .jpeg, .png'}))
     product_city = forms.ModelChoiceField(queryset=City.objects.all(), required=True)
-    product_launch_date = forms.DateField(required=True, widget=forms.DateInput(attrs={'type': 'date'}))
+    product_launch_date = forms.DateField(required=True, widget=forms.DateInput(attrs={'type': 'date', 'id': 'launch_date'}))
     product_future_launch_date = forms.DateField(required=True, widget=forms.DateInput(attrs={'type': 'date'}))
     captcha = CaptchaField()
 
