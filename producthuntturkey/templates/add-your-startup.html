@@ -19,69 +19,69 @@
         {% csrf_token %}
         <div class="row">
             <div>
-                <label>{% trans "Product Name" %}</label>
+                <label>{% trans "Product Name" %}{% if form.product_name.field.required %}*{% endif %}</label>
                 {{form.product_name}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label>{% trans "Product Picture" %}</label>
+                <label>{% trans "Product Picture" %}{% if form.product_picture.field.required %}*{% endif %}</label>
                 <br>
                 {{form.product_picture}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label>{% trans "Product Hunt Link" %}</label>
+                <label>{% trans "Product Hunt Link" %}{% if form.product_ph_link.field.required %}*{% endif %}</label>
                 {{form.product_ph_link}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label>{% trans "Product Website" %}</label>
+                <label>{% trans "Product Website" %}{% if form.product_website.field.required %}*{% endif %}</label>
                 {{form.product_website}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label>{% trans "Product Lauch Date" %}</label>
+                <label>{% trans "Product Lauch Date" %}{% if form.product_launch_date.field.required %}*{% endif %}</label>
                 <br>
                 {{form.product_launch_date}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label>{% trans "Product Twitter Username" %}</label>
+                <label>{% trans "Product Twitter Username" %}{% if form.product_twitter.field.required %}*{% endif %}</label>
                 {{form.product_twitter}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label>{% trans "Product Owner Username" %}</label>
+                <label>{% trans "Product Owner Username" %}{% if form.product_owner_twitter.field.required %}*{% endif %}</label>
                 {{form.product_owner_twitter}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label>{% trans "Product Team Sizes" %}</label>
+                <label>{% trans "Product Team Sizes" %}{% if form.product_team_size.field.required %}*{% endif %}</label>
                 {{form.product_team_size}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label>{% trans "Country" %}</label>
+                <label>{% trans "Country" %}{% if form.product_city.field.required %}*{% endif %}</label>
                 {{form.product_city}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label>{% trans "Product Turkish Description" %}</label>
+                <label>{% trans "Product Turkish Description" %}{% if form.product_about_tr.field.required %}*{% endif %}</label>
                 {{form.product_about_tr}}
             </div>
         </div>
         <div class="row">
             <div>
-                <label>{% trans "Product English Description" %}</label>
+                <label>{% trans "Product English Description" %}{% if form.product_about_en.field.required %}*{% endif %}</label>
                 {{form.product_about_en}}
             </div>
         </div>
