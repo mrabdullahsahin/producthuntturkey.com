@@ -5,6 +5,15 @@
 {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
 {% load static %}
 
+{% block title %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% if CURRENT_LANGUAGE == 'en' %}
+What is Product Hunt? - Product Hunt Turkey
+{% elif CURRENT_LANGUAGE == 'tr' %}
+Product Hunt Nedir? - Product Hunt Turkey
+{% endif %}
+{% endblock title %}
+
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/what.css' %}">
 {% endblock css %}

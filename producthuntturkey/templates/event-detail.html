@@ -2,6 +2,15 @@
 {% load i18n %}
 {% load static %}
 
+{% block title %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% if CURRENT_LANGUAGE == 'en' %}
+{{event.event_name}} - Product Hunt Turkey
+{% elif CURRENT_LANGUAGE == 'tr' %}
+{{event.event_name}} - Product Hunt Turkey
+{% endif %}
+{% endblock title %}
+
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/event-detail.css' %}">
 {% endblock css %}
