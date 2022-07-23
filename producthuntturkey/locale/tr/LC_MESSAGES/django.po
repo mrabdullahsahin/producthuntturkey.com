@@ -78,7 +78,7 @@ msgstr "Gönder"
 
 #: templates/ambassadors.html:11
 msgid "Product Hunt Ambassadors of 🇹🇷 Turkey"
-msgstr "Product Hunt'ın 🇹🇷 Türkiy'e Elçileri"
+msgstr "Product Hunt'ın 🇹🇷 Türkiye Elçileri"
 
 #: templates/city.html:42 templates/events.html:33 templates/index.html:38
 #: templates/product-detail.html:24 templates/team-size.html:42
