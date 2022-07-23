@@ -2,6 +2,15 @@
 {% load i18n %}
 {% load static %}
 
+{% block title %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% if CURRENT_LANGUAGE == 'en' %}
+Events in {{ city.city }} - Product Hunt Turkey
+{% elif CURRENT_LANGUAGE == 'tr' %}
+{{ city.city }} Şehrinde Düzenlenen Etkinlikler - Product Hunt Turkey
+{% endif %}
+{% endblock title %}
+
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/events.css' %}">
 {% endblock css %}

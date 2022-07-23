@@ -2,6 +2,15 @@
 {% load i18n %}
 {% load static %}
 
+{% block title %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% if CURRENT_LANGUAGE == 'en' %}
+Product Team Size {{ teamsize.size }} - Product Hunt Turkey
+{% elif CURRENT_LANGUAGE == 'tr' %}
+{{ teamsize.size }} Kişilik Takımlar Tarafından Geliştirilen Ürünler - Product Hunt Turkey
+{% endif %}
+{% endblock title %}
+
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/products.css' %}">
 {% endblock css %}
