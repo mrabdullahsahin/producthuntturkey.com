@@ -18,7 +18,14 @@ Developed Product in {{ city.city }} - Product Hunt Turkey
 {% block content %}
 {% include 'partials/_social-media.html' %}
 <div class="filter">
-    <h1 class="filter-item">Developed Product in {{ city.city }}</h1>
+    <h1 class="filter-item">
+        {% get_current_language as CURRENT_LANGUAGE %}
+        {% if CURRENT_LANGUAGE == 'en' %}
+        Developed Product in {{ city.city }}
+        {% elif CURRENT_LANGUAGE == 'tr' %}
+        {{ city.city }} Şehrinde Geliştirilen Ürünler
+        {% endif %}
+    </h1>
 </div>
 <div class="product-section">
     {% regroup products by product_launch_date as products_list %}
