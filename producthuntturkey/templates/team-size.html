@@ -18,7 +18,14 @@ Product Team Size {{ teamsize.size }} - Product Hunt Turkey
 {% block content %}
 {% include 'partials/_social-media.html' %}
 <div class="filter">
-    <h1 class="filter-item">Product Team Size {{ teamsize.size }}</h1>
+    <h1 class="filter-item">
+        {% get_current_language as CURRENT_LANGUAGE %}
+        {% if CURRENT_LANGUAGE == 'en' %}
+        Product Team Size {{ teamsize.size }}
+        {% elif CURRENT_LANGUAGE == 'tr' %}
+        {{ teamsize.size }} Kişilik Takım Tarafından Geliştirilen Ürünler
+        {% endif %}
+    </h1>
 </div>
 <div class="product-section">
     {% regroup products by product_launch_date as products_list %}
