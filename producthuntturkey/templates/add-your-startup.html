@@ -27,6 +27,17 @@ Girişimini Ekle - Product Hunt Turkey
     <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="row">
+            <p class="form-info-title">Girişimini Ekle Kullanım Kılavuzu</p>
+            </br>
+            <p>Product Hunt Turkey topluluğunda ürününüzü yayınlayabilmek için dikkat etmeniz gereken hususlar;</p>
+            </br>
+            <ol>
+                <li>Ürününüz insanlığı kumar ve benzeri kötü alışkanlıklara teşvik etmiyor olması gerekmektedir.</li>
+                <li>Ürününüz toplumsal ahlakı zedeleyici olmaması gerekmektedir.</li>
+            </ol>
+            </br>
+        </div>
+        <div class="row">
             <div>
                 <label>{% trans "Product Name" %}{% if form.product_name.field.required %}*{% endif %}</label>
                 {{form.product_name}}

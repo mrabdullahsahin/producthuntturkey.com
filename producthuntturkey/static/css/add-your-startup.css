@@ -46,6 +46,11 @@
   clear: both;
 }
 
+.form-info-title {
+  font-size: 23px;
+  font-weight: bold;
+}
+
 input[type=text],
 input[type=url],
 select,
