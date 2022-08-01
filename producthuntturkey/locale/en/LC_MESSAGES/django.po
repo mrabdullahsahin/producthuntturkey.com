@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-19 19:37+0300\n"
+"POT-Creation-Date: 2022-08-01 20:47+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,85 +18,91 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: producthuntturkey/settings.py:126
+#: producthuntturkey/settings/settings.py:130
 msgid "English"
 msgstr "English"
 
-#: producthuntturkey/settings.py:127
+#: producthuntturkey/settings/settings.py:131
 msgid "Turkish"
 msgstr "Turkish"
 
-#: templates/add-your-startup.html:22
+#: templates/add-your-startup.html:31
 msgid "Product Name"
 msgstr ""
 
-#: templates/add-your-startup.html:28
+#: templates/add-your-startup.html:37
 msgid "Product Picture"
 msgstr ""
 
-#: templates/add-your-startup.html:35
+#: templates/add-your-startup.html:44
 msgid "Product Hunt Link"
 msgstr ""
 
-#: templates/add-your-startup.html:41
+#: templates/add-your-startup.html:50
 msgid "Product Website"
 msgstr ""
 
-#: templates/add-your-startup.html:47
+#: templates/add-your-startup.html:56
 msgid "Product Lauch Date"
 msgstr ""
 
-#: templates/add-your-startup.html:54
+#: templates/add-your-startup.html:63
 msgid "Product Twitter Username"
 msgstr ""
 
-#: templates/add-your-startup.html:60
+#: templates/add-your-startup.html:69
 msgid "Product Owner Username"
 msgstr ""
 
-#: templates/add-your-startup.html:66
+#: templates/add-your-startup.html:75
 msgid "Product Team Sizes"
 msgstr ""
 
-#: templates/add-your-startup.html:72
+#: templates/add-your-startup.html:81
 msgid "Country"
 msgstr ""
 
-#: templates/add-your-startup.html:78
+#: templates/add-your-startup.html:87
 msgid "Product Turkish Description"
 msgstr ""
 
-#: templates/add-your-startup.html:84
+#: templates/add-your-startup.html:93
 msgid "Product English Description"
 msgstr ""
 
-#: templates/add-your-startup.html:103
+#: templates/add-your-startup.html:112
 msgid " Submit"
 msgstr ""
 
-#: templates/ambassadors.html:11
+#: templates/ambassadors.html:20
 msgid "Product Hunt Ambassadors of 🇹🇷 Turkey"
 msgstr ""
 
-#: templates/city.html:42 templates/events.html:33 templates/index.html:38
-#: templates/product-detail.html:24 templates/team-size.html:42
+#: templates/city.html:58 templates/event-city.html:45
+#: templates/event-detail.html:36 templates/events.html:42
+#: templates/index.html:41 templates/product-detail.html:33
+#: templates/team-size.html:58
 msgid "Go"
 msgstr ""
 
-#: templates/city.html:45 templates/events.html:36 templates/index.html:41
-#: templates/team-size.html:45
+#: templates/city.html:61 templates/event-city.html:48 templates/index.html:44
+#: templates/team-size.html:61
 msgid "View"
 msgstr ""
 
-#: templates/open-startup.html:12
+#: templates/index.html:53
+msgid "No product has been relased yet."
+msgstr ""
+
+#: templates/open-startup.html:21
 msgid "Number of Total Startups"
 msgstr ""
 
-#: templates/open-startup.html:16
+#: templates/open-startup.html:25
 msgid "Number of E-Mail Subscribers"
 msgstr ""
 
-#: templates/open-startup.html:20
+#: templates/open-startup.html:29
 msgid "Number of Telegram Channel Subscribers"
 msgstr ""
 
@@ -132,35 +138,35 @@ msgstr ""
 msgid "Add Your Product"
 msgstr ""
 
-#: templates/product-detail.html:32
+#: templates/product-detail.html:41
 msgid "Developed in"
 msgstr ""
 
-#: templates/product-detail.html:37
+#: templates/product-detail.html:46
 msgid "Product Team Size"
 msgstr ""
 
-#: templates/product-detail.html:42
+#: templates/product-detail.html:51
 msgid "Visit on Product Hunt Page"
 msgstr ""
 
-#: templates/product-detail.html:43 templates/product-detail.html:49
-#: templates/product-detail.html:57 templates/product-detail.html:64
+#: templates/product-detail.html:52 templates/product-detail.html:58
+#: templates/product-detail.html:66 templates/product-detail.html:73
 msgid "Visit"
 msgstr ""
 
-#: templates/product-detail.html:47
+#: templates/product-detail.html:56
 msgid "Visit on Product Website"
 msgstr ""
 
-#: templates/product-detail.html:55
+#: templates/product-detail.html:64
 msgid "Visit on Product Twitter Profile"
 msgstr ""
 
-#: templates/product-detail.html:62
+#: templates/product-detail.html:71
 msgid "Visit on Product Owner Twitter Profile"
 msgstr ""
 
-#: templates/product-detail.html:69
+#: templates/product-detail.html:78
 msgid "Total of Votes"
 msgstr ""
