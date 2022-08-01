@@ -1,3 +1,13 @@
+.index-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .product-section {
     display: flex;
     flex-direction: column;
@@ -186,6 +196,11 @@ span>a:hover {
 }
 
 @media (max-width: 900px) {
+    .index-info {
+        width: 98%;
+        font-size: 21px;
+    }
+
     .time {
         margin-left: 1%;
         margin-top: 5%;

@@ -9,6 +9,8 @@
 {% block content %}
 {% include 'partials/_social-media.html' %}
 {% include 'partials/_newsletter.html' %}
+
+{% if products %}
 <div class="product-section">
   {% regroup products by product_launch_date as products_list %}
   {% for products in products_list %}
@@ -47,6 +49,9 @@
   {% endfor %}
   {% endfor %}
 </div>
+{% else %}
+<h1 class="index-info">{% trans "No product has been relased yet." %}</h1>
+{% endif %}
 
 {% include 'partials/_pagination.html' %}
 {% endblock content %}
