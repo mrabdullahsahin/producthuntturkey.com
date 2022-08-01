@@ -26,6 +26,32 @@ Girişimini Ekle - Product Hunt Turkey
     {% endif %}
     <form action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
+        {% get_current_language as CURRENT_LANGUAGE %}
+        {% if CURRENT_LANGUAGE == 'en' %}
+        <div class="row">
+            <p class="form-info-title">Add Your Product Form Terms of Use</p>
+            </br>
+            <p>The points you need to pay attention to in order to publish your product in the Product Hunt Turkey community;</p>
+            </br>
+            <ol>
+                <li>Your product must not encourage humanity to gamble or similar bad habits.</li>
+                <li>Your product must not be harmful to social morality.</li>
+            </ol>
+            </br>
+        </div>
+        {% elif CURRENT_LANGUAGE == 'tr' %}
+        <div class="row">
+            <p class="form-info-title">Girişimini Ekle Kullanım Şartları</p>
+            </br>
+            <p>Product Hunt Turkey topluluğunda ürününüzü yayınlayabilmek için dikkat etmeniz gereken hususlar;</p>
+            </br>
+            <ol>
+                <li>Ürününüz insanlığı kumar ve benzeri kötü alışkanlıklara teşvik etmiyor olması gerekmektedir.</li>
+                <li>Ürününüz toplumsal ahlakı zedeleyici olmaması gerekmektedir.</li>
+            </ol>
+            </br>
+        </div>
+        {% endif %}
         <div class="row">
             <div>
                 <label>{% trans "Product Name" %}{% if form.product_name.field.required %}*{% endif %}</label>
