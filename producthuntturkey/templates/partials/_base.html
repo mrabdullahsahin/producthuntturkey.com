@@ -14,6 +14,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Product Hunt Turkey{% endblock title %}</title>
+    <link rel="canonical" href="https://producthuntturkey.com/">
+    <meta name="robots" content="index, follow"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{% block og-title %}Product Hunt Turkey{% endblock og-title %}"/>
+    <meta property="og:description" content="{% block og-description %}
+    {% get_current_language as CURRENT_LANGUAGE %}
+    {% if CURRENT_LANGUAGE == 'en' %}Product Hunt Community for Turkey's Makers, Startups.{% elif CURRENT_LANGUAGE == 'tr' %}
+    Türkiye'nin Geliştiricileri, Üreticileri ve Startup'ları için Product Hunt Topluluğu.{% endif %}
+    {% endblock og-description %}"/>
+    <meta property="og:image" content="{% static 'images/product-hunt-turkey-preview.jpeg' %}"/>
+    <meta property=”og:url” content=”https://producthuntturkey.com”/>
+    {% get_current_language as CURRENT_LANGUAGE %}
+    {% if CURRENT_LANGUAGE == 'en' %}
+    <meta property=”og:locale” content="en"/>
+    {% elif CURRENT_LANGUAGE == 'tr' %}
+    <meta property=”og:locale” content="tr"/>
+    {% endif %}
+    <meta property=”og:site_name” content="{% block og-site-name %}
+    {% get_current_language as CURRENT_LANGUAGE %}
+    {% if CURRENT_LANGUAGE == 'en' %}Product Hunt Turkey{% elif CURRENT_LANGUAGE == 'tr' %}Product Hunt Turkey{% endif %}{% endblock og-site-name %}"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="@productturkey"/>
+    <meta name="twitter:title" content="{% block og-twitter-title %}
+    {% get_current_language as CURRENT_LANGUAGE %}
+    {% if CURRENT_LANGUAGE == 'en' %}Product Hunt Turkey{% elif CURRENT_LANGUAGE == 'tr' %}Product Hunt Turkey{% endif %}
+    {% endblock og-twitter-title %}"/>
+    <meta name="twitter:description" content="{% block og-twitter-description %}
+    {% get_current_language as CURRENT_LANGUAGE %}
+    {% if CURRENT_LANGUAGE == 'en' %}Product Hunt Community for Turkey's Makers, Startups
+    {% elif CURRENT_LANGUAGE == 'tr' %}Türkiye'nin Geliştiricileri, Üreticileri ve Startup'ları için Product Hunt Topluluğu.
+    {% endif %}{% endblock og-twitter-description %}"/>
+    <meta name="twitter:image" content="{% static 'images/product-hunt-turkey-preview.jpeg' %}"/>
+    <meta name="twitter:creator" content="@productturkey">
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
