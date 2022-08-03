@@ -11,6 +11,51 @@ Elçiler - Product Hunt Turkey
 {% endif %}
 {% endblock title %}
 
+{% block og-title %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% if CURRENT_LANGUAGE == 'en' %}
+Ambassadors - Product Hunt Turkey
+{% elif CURRENT_LANGUAGE == 'tr' %}
+Elçiler - Product Hunt Turkey
+{% endif %}
+{% endblock og-title %}
+
+{% block og-description %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% if CURRENT_LANGUAGE == 'en' %}
+Ambassadors of Product Hunt from Turkey
+{% elif CURRENT_LANGUAGE == 'tr' %}
+Türkiye'nin Product Hunt Elçileri
+{% endif %}
+{% endblock og-description %}
+
+{% block og-site-name %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% if CURRENT_LANGUAGE == 'en' %}
+Ambassadors - Product Hunt Turkey
+{% elif CURRENT_LANGUAGE == 'tr' %}
+Elçiler - Product Hunt Turkey
+{% endif %}
+{% endblock og-site-name %}
+
+{% block og-twitter-title %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% if CURRENT_LANGUAGE == 'en' %}
+Add Your Startup - Product Hunt Turkey
+{% elif CURRENT_LANGUAGE == 'tr' %}
+Ürününü Ekle - Product Hunt Turkey
+{% endif %}
+{% endblock og-twitter-title %}
+
+{% block og-twitter-description %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% if CURRENT_LANGUAGE == 'en' %}
+Ambassadors of Product Hunt from Turkey
+{% elif CURRENT_LANGUAGE == 'tr' %}
+Türkiye'nin Product Hunt Elçileri
+{% endif %}
+{% endblock og-twitter-description %}
+
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/ambassadors.css' %}">
 {% endblock css %}

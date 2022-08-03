@@ -11,6 +11,51 @@
 {% endif %}
 {% endblock title %}
 
+{% block og-title %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% if CURRENT_LANGUAGE == 'en' %}
+{{product.product_name}} - Product Hunt Turkey
+{% elif CURRENT_LANGUAGE == 'tr' %}
+{{product.product_name}} - Product Hunt Turkey
+{% endif %}
+{% endblock og-title %}
+
+{% block og-description %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% if CURRENT_LANGUAGE == 'en' %}
+{{product.product_description}} - Product Hunt Turkey
+{% elif CURRENT_LANGUAGE == 'tr' %}
+{{product.product_description}} - Product Hunt Türkiye
+{% endif %}
+{% endblock og-description %}
+
+{% block og-site-name %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% if CURRENT_LANGUAGE == 'en' %}
+{{product.product_name}} - Product Hunt Turkey
+{% elif CURRENT_LANGUAGE == 'tr' %}
+{{product.product_name}} - Product Hunt Turkey
+{% endif %}
+{% endblock og-site-name %}
+
+{% block og-twitter-title %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% if CURRENT_LANGUAGE == 'en' %}
+{{product.product_name}} - Product Hunt Turkey
+{% elif CURRENT_LANGUAGE == 'tr' %}
+{{product.product_name}} - Product Hunt Turkey
+{% endif %}
+{% endblock og-twitter-title %}
+
+{% block og-twitter-description %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% if CURRENT_LANGUAGE == 'en' %}
+{{product.product_description}} - Product Hunt Turkey
+{% elif CURRENT_LANGUAGE == 'tr' %}
+{{product.product_description}} - Product Hunt Türkiye
+{% endif %}
+{% endblock og-twitter-description %}
+
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/product.css' %}">
 {% endblock css %}
