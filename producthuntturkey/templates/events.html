@@ -62,6 +62,7 @@ Türkiye'de düzenlenen Product Hunt etkinlikleri.
 
 {% block content %}
 {% include 'partials/_social-media.html' %}
+{% if events %}
 <div class="event-section">
   {% regroup events by event_date as events_list %}
   {% for events in events_list %}
@@ -92,6 +93,9 @@ Türkiye'de düzenlenen Product Hunt etkinlikleri.
   {% endfor %}
   {% endfor %}
 </div>
+{% else %}
+<h1 class="event-no-title">{% trans "No event has been relased yet." %}</h1>
+{% endif %}
 
 {% include 'partials/_pagination.html' %}
 {% endblock content %}
