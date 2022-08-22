@@ -6,9 +6,9 @@ case $1 in
     python manage.py runserver --settings=producthuntturkey.settings.local
     ;;
   prod)
-  	python manage.py collectstatic --noinput
     python manage.py makemigrations    
     python manage.py migrate
+    python manage.py collectstatic --noinput
     python manage.py runserver --settings=producthuntturkey.settings.prod
     ;;
 esac
