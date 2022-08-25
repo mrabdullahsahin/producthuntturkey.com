@@ -78,7 +78,11 @@
             </div>
             <a class="support" href="{{product.product_ph_link}}?ref=producthuntturkey.com" target="_blank"
                 rel="noopener noreferrer">
-                <button class="support-button">{% trans "Go" %}</button>
+                {% if CURRENT_LANGUAGE == 'en' %}
+                <button class="support-button">Go</button>
+                {% elif CURRENT_LANGUAGE == 'tr' %}
+                <button class="support-button">Destekle</button>
+                {% endif %}
             </a>
         </article>
     </section>

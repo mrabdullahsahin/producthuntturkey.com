@@ -36,13 +36,23 @@
         </div>
       </div>
       <div>
+        {% if CURRENT_LANGUAGE == 'en' %}
         <a class="support" href="{{product.product_ph_link}}?ref=producthuntturkey.com" target="_blank"
-          rel="noopener noreferrer">
-          <button class="support-button">{% trans "Go" %}</button>
+        rel="noopener noreferrer">
+        <button class="support-button">Go</button>
         </a>
         <a class="support" href="{% url 'product_detail' product.slug %}">
-          <button class="support-button">{% trans "View" %}</button>
+          <button class="support-button">View</button>
         </a>
+        {% elif CURRENT_LANGUAGE == 'tr' %}
+        <a class="support" href="{{product.product_ph_link}}?ref=producthuntturkey.com" target="_blank"
+          rel="noopener noreferrer">
+          <button class="support-button">Destekle</button>
+        </a>
+        <a class="support" href="{% url 'product_detail' product.slug %}">
+          <button class="support-button">İncele</button>
+        </a>
+        {% endif %}
       </div>
     </article>
   </section>
