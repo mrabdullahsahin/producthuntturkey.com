@@ -44,6 +44,7 @@
 .ambassador-list__picture__item {
     display: flex;
     margin-bottom: 15px;
+    width: 300px;
 }
 
 .ambassador-list__name {
