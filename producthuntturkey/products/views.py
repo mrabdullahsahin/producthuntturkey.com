@@ -19,7 +19,7 @@ def index(request, product_slug=None, city_slug=None, teamsize_slug=None):
 
         page = request.GET.get('page', 1)
 
-        paginator = Paginator(products_list, 3)
+        paginator = Paginator(products_list, 67)
         try:
             products = paginator.page(page)
         except PageNotAnInteger:
@@ -41,7 +41,7 @@ def index(request, product_slug=None, city_slug=None, teamsize_slug=None):
 
         page = request.GET.get('page', 1)
 
-        paginator = Paginator(products_list, 3)
+        paginator = Paginator(products_list, 67)
         try:
             products = paginator.page(page)
         except PageNotAnInteger:
@@ -60,7 +60,7 @@ def index(request, product_slug=None, city_slug=None, teamsize_slug=None):
         products_list = Product.objects.filter(is_avaliable=True).order_by('-product_launch_date').all()
         page = request.GET.get('page', 1)
 
-        paginator = Paginator(products_list, 3)
+        paginator = Paginator(products_list, 67)
         try:
             products = paginator.page(page)
         except PageNotAnInteger:
