@@ -1,9 +1,19 @@
 {% load i18n %}
-{% load static %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% get_available_languages as AVAILABLE_LANGUAGES %}
+{% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
+{% if CURRENT_LANGUAGE == 'en' %}
 <div class="OpenSourceContainer">
-    <section class="OpenSourceContent">
-        {% trans "Product Hunt Turkey is an open source." %} <a class="OpenSourceLink"
+    <section class="OpenSourceContent">Product Hunt Turkey is an open source.<a class="OpenSourceLink"
             href="https://github.com/mrabdullahsahin/producthuntturkey.com" target="_blank"
-            rel="noopener noreferrer"><span> </span>{% trans "Contribute on github!" %}</a>
+            rel="noopener noreferrer"><span> </span>Contribute on github!</a>
     </section>
 </div>
+{% elif CURRENT_LANGUAGE == 'tr' %}
+<div class="OpenSourceContainer">
+    <section class="OpenSourceContent">Product Hunt Turkey açık kaynaklı bir girişimdir.<a class="OpenSourceLink"
+            href="https://github.com/mrabdullahsahin/producthuntturkey.com" target="_blank"
+            rel="noopener noreferrer"><span> </span>Katkıda bulunun!</a>
+    </section>
+</div>
+{% endif %}

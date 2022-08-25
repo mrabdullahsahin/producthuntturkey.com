@@ -1,6 +1,9 @@
 {% extends 'partials/_base.html' %}
 {% load i18n %}
 {% load static %}
+{% get_current_language as CURRENT_LANGUAGE %}
+{% get_available_languages as AVAILABLE_LANGUAGES %}
+{% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
 
 {% block title %}
 {% get_current_language as CURRENT_LANGUAGE %}
@@ -82,47 +85,106 @@
 </div>
 
 <div class="product-info-container">
+    {% if CURRENT_LANGUAGE == 'en' %}
     <div class="product-info">
-        <h2 class="product-info-title">{% trans "Developed in" %}</h2>
+        <h2 class="product-info-title">Developed in</h2>
         <a class="product-info-content" href="{% url 'city-list' product.product_city.slug %}">🇹🇷
             {{product.product_city}}</a>
     </div>
+    {% elif CURRENT_LANGUAGE == 'tr' %}
     <div class="product-info">
-        <h2 class="product-info-title">{% trans "Product Team Size" %}</h2>
-        <a class="product-info-content" href="{% url 'team-size-list' product.product_team_size.slug %}">🧑‍💼
-            {{product.product_team_size}}</a>
-    </div>
-    <div class="product-info">
-        <h2 class="product-info-title">{% trans "Visit on Product Hunt Page" %}</h2>
-        <a class="product-info-content" href="{{ product.product_ph_link }}" target="_blank">{% trans "Visit" %}</a>
-    </div>
-    {% if product.product_website != None %}
-    <div class="product-info">
-        <h2 class="product-info-title">{% trans "Visit on Product Website" %}</h2>
-        <a class="product-info-content" href="{{ product.product_website }}?ref=producthuntturkey.com"
-            target="_blank">{% trans "Visit" %}</a>
+        <h2 class="product-info-title">Geliştirildiği Yer</h2>
+        <a class="product-info-content" href="{% url 'city-list' product.product_city.slug %}">🇹🇷
+            {{product.product_city}}</a>
     </div>
     {% endif %}
 
+    {% if CURRENT_LANGUAGE == 'en' %}
+    <div class="product-info">
+        <h2 class="product-info-title">Product Team Size</h2>
+        <a class="product-info-content" href="{% url 'team-size-list' product.product_team_size.slug %}">🧑‍💼
+            {{product.product_team_size}}</a>
+    </div>
+    {% elif CURRENT_LANGUAGE == 'tr' %}
+    <div class="product-info">
+        <h2 class="product-info-title">Takım Büyüklüğü</h2>
+        <a class="product-info-content" href="{% url 'team-size-list' product.product_team_size.slug %}">🧑‍💼
+            {{product.product_team_size}}</a>
+    </div>
+    {% endif %}
+
+    {% if CURRENT_LANGUAGE == 'en' %}
+    <div class="product-info">
+        <h2 class="product-info-title">Visit on Product Hunt Page</h2>
+        <a class="product-info-content" href="{{ product.product_ph_link }}" target="_blank">Visit</a>
+    </div>
+    {% elif CURRENT_LANGUAGE == 'tr' %}
+    <div class="product-info">
+        <h2 class="product-info-title">Product Hunt Sayfası</h2>
+        <a class="product-info-content" href="{{ product.product_ph_link }}" target="_blank">Ziyaret Et</a>
+    </div>
+    {% endif %}
+
+    {% if product.product_website != None %}
+    {% if CURRENT_LANGUAGE == 'en' %}
+    <div class="product-info">
+        <h2 class="product-info-title">Visit on Product Website</h2>
+        <a class="product-info-content" href="{{ product.product_website }}?ref=producthuntturkey.com"
+            target="_blank">Visit</a>
+    </div>
+    {% elif CURRENT_LANGUAGE == 'tr' %}
+    <div class="product-info">
+        <h2 class="product-info-title">Ürünün Sayfası</h2>
+        <a class="product-info-content" href="{{ product.product_website }}?ref=producthuntturkey.com"
+            target="_blank">Ziyaret Et</a>
+    </div>
+    {% endif %}
+    {% endif %}
+
     {% if product.product_twitter %}
+    {% if CURRENT_LANGUAGE == 'en' %}
     <div class="product-info">
-        <h2 class="product-info-title">{% trans "Visit on Product Twitter Profile" %}</h2>
+        <h2 class="product-info-title">Visit on Product Twitter Profile</h2>
         <a class="product-info-content" href="{{ product.product_twitter }}?ref=producthuntturkey.com"
-            target="_blank">{% trans "Visit" %}</a>
+            target="_blank">Visit</a>
+    </div>
+    {% elif CURRENT_LANGUAGE == 'tr' %}
+    <div class="product-info">
+        <h2 class="product-info-title">Ürünün Twitter Profili</h2>
+        <a class="product-info-content" href="{{ product.product_twitter }}?ref=producthuntturkey.com"
+            target="_blank">Ziyaret Et</a>
     </div>
     {% endif %}
+    {% endif %}
+
     {% if product.product_owner_twitter %}
+    {% if CURRENT_LANGUAGE == 'en' %}
     <div class="product-info">
-        <h2 class="product-info-title">{% trans "Visit on Product Owner Twitter Profile" %}</h2>
+        <h2 class="product-info-title">Visit on Product Owner Twitter Profile</h2>
         <a class="product-info-content" href="{{ product.product_owner_twitter }}?ref=producthuntturkey.com"
-            target="_blank">{% trans "Visit" %}</a>
+            target="_blank">Visit</a>
+    </div>
+    {% elif CURRENT_LANGUAGE == 'tr' %}
+    <div class="product-info">
+        <h2 class="product-info-title">Geliştiricinin Twitter Profili</h2>
+        <a class="product-info-content" href="{{ product.product_owner_twitter }}?ref=producthuntturkey.com"
+            target="_blank">Ziyaret Et</a>
     </div>
     {% endif %}
+    {% endif %}
+
     {% if product.product_hunt_votes > 0 %}
+    {% if CURRENT_LANGUAGE == 'en' %}
     <div class="product-info">
-        <h2 class="product-info-title">{% trans "Total of Votes" %}</h2>
+        <h2 class="product-info-title">Total of Votes</h2>
         <p class="product-info-content">{{ product.product_hunt_votes }}</p>
     </div>
+    {% elif CURRENT_LANGUAGE == 'tr' %}
+    <div class="product-info">
+        <h2 class="product-info-title">Toplam Oy</h2>
+        <p class="product-info-content">{{ product.product_hunt_votes }}</p>
+    </div>
+    {% endif %}
     {% endif %}
 </div>
 {% endblock content %}

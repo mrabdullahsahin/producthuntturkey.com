@@ -98,72 +98,151 @@ Add Your Startup - Product Hunt Turkey
         </div>
         {% endif %}
         <div class="row">
+            {% if CURRENT_LANGUAGE == 'en' %}
             <div>
-                <label>{% trans "Product Name" %}{% if form.product_name.field.required %}*{% endif %}</label>
+                <label>Product Name{% if form.product_name.field.required %}*{% endif %}</label>
                 {{form.product_name}}
             </div>
+            {% elif CURRENT_LANGUAGE == 'tr' %}
+            <div>
+                <label>Ürünün Adı{% if form.product_name.field.required %}*{% endif %}</label>
+                {{form.product_name}}
+            </div>
+            {% endif %}
         </div>
         <div class="row">
+            {% if CURRENT_LANGUAGE == 'en' %}
             <div>
-                <label>{% trans "Product Picture" %}{% if form.product_picture.field.required %}*{% endif %}</label>
+                <label>Product Picture{% if form.product_picture.field.required %}*{% endif %}</label>
                 <br>
                 {{form.product_picture}}
             </div>
+            {% elif CURRENT_LANGUAGE == 'tr' %}
+            <div>
+                <label>Ürünün Resmi{% if form.product_picture.field.required %}*{% endif %}</label>
+                <br>
+                {{form.product_picture}}
+            </div>
+            {% endif %}
         </div>
         <div class="row">
+            {% if CURRENT_LANGUAGE == 'en' %}
             <div>
-                <label>{% trans "Product Hunt Link" %}{% if form.product_ph_link.field.required %}*{% endif %}</label>
+                <label>Product Hunt Link{% if form.product_ph_link.field.required %}*{% endif %}</label>
                 {{form.product_ph_link}}
             </div>
+            {% elif CURRENT_LANGUAGE == 'tr' %}
+            <div>
+                <label>Product Hunt Linki{% if form.product_ph_link.field.required %}*{% endif %}</label>
+                {{form.product_ph_link}}
+            </div>
+            {% endif %}
         </div>
         <div class="row">
+            {% if CURRENT_LANGUAGE == 'en' %}
             <div>
-                <label>{% trans "Product Website" %}{% if form.product_website.field.required %}*{% endif %}</label>
+                <label>Product Website{% if form.product_website.field.required %}*{% endif %}</label>
                 {{form.product_website}}
             </div>
+            {% elif CURRENT_LANGUAGE == 'tr' %}
+            <div>
+                <label>Ürünün Web Sayfası/Android Linki/iOS Linki{% if form.product_website.field.required %}*{% endif %}</label>
+                {{form.product_website}}
+            </div>
+            {% endif %}
         </div>
         <div class="row">
+            {% if CURRENT_LANGUAGE == 'en' %}
             <div>
-                <label>{% trans "Product Lauch Date" %}{% if form.product_launch_date.field.required %}*{% endif %}</label>
+                <label>Product Lauch Date{% if form.product_launch_date.field.required %}*{% endif %}</label>
                 <br>
                 {{form.product_launch_date}}
             </div>
+            {% elif CURRENT_LANGUAGE == 'tr' %}
+            <div>
+                <label>Ürünün Product Hunt Lansman Tarihi{% if form.product_launch_date.field.required %}*{% endif %}</label>
+                <br>
+                {{form.product_launch_date}}
+            </div>
+            {% endif %}
         </div>
         <div class="row">
+            {% if CURRENT_LANGUAGE == 'en' %}
             <div>
-                <label>{% trans "Product Twitter Username" %}{% if form.product_twitter.field.required %}*{% endif %}</label>
+                <label>Product Twitter Username{% if form.product_twitter.field.required %}*{% endif %}</label>
                 {{form.product_twitter}}
             </div>
+            {% elif CURRENT_LANGUAGE == 'tr' %}
+            <div>
+                <label>Ürünün Twitter Kullanıcı Adı{% if form.product_twitter.field.required %}*{% endif %}</label>
+                {{form.product_twitter}}
+            </div>
+            {% endif %}
         </div>
         <div class="row">
+            {% if CURRENT_LANGUAGE == 'en' %}
             <div>
-                <label>{% trans "Product Owner Username" %}{% if form.product_owner_twitter.field.required %}*{% endif %}</label>
+                <label>Product Owner Twitter Username{% if form.product_owner_twitter.field.required %}*{% endif %}</label>
                 {{form.product_owner_twitter}}
             </div>
+            {% elif CURRENT_LANGUAGE == 'tr' %}
+            <div>
+                <label>Ürün Geliştiricisinin Twitter Kullanıcı Adı{% if form.product_owner_twitter.field.required %}*{% endif %}</label>
+                {{form.product_owner_twitter}}
+            </div>
+            {% endif %}
         </div>
         <div class="row">
+            {% if CURRENT_LANGUAGE == 'en' %}
             <div>
-                <label>{% trans "Product Team Sizes" %}{% if form.product_team_size.field.required %}*{% endif %}</label>
+                <label>Product Team Sizes{% if form.product_team_size.field.required %}*{% endif %}</label>
                 {{form.product_team_size}}
             </div>
+            {% elif CURRENT_LANGUAGE == 'tr' %}
+            <div>
+                <label>Ürünün Takım Büyüklüğü{% if form.product_team_size.field.required %}*{% endif %}</label>
+                {{form.product_team_size}}
+            </div>
+            {% endif %}
         </div>
         <div class="row">
+            {% if CURRENT_LANGUAGE == 'en' %}
             <div>
-                <label>{% trans "Country" %}{% if form.product_city.field.required %}*{% endif %}</label>
+                <label>Choose a City/Country{% if form.product_city.field.required %}*{% endif %}</label>
                 {{form.product_city}}
             </div>
+            {% elif CURRENT_LANGUAGE == 'tr' %}
+            <div>
+                <label>Şehir/Ülke Seçiniz{% if form.product_city.field.required %}*{% endif %}</label>
+                {{form.product_city}}
+            </div>
+            {% endif %}
         </div>
         <div class="row">
+            {% if CURRENT_LANGUAGE == 'en' %}
             <div>
-                <label>{% trans "Product Turkish Description" %}{% if form.product_about_tr.field.required %}*{% endif %}</label>
+                <label>Product Turkish Description{% if form.product_about_tr.field.required %}*{% endif %}</label>
                 {{form.product_about_tr}}
             </div>
+            {% elif CURRENT_LANGUAGE == 'tr' %}
+            <div>
+                <label>Ürünün Türkçe Açıklaması{% if form.product_about_tr.field.required %}*{% endif %}</label>
+                {{form.product_about_tr}}
+            </div>
+            {% endif %}
         </div>
         <div class="row">
+            {% if CURRENT_LANGUAGE == 'en' %}
             <div>
-                <label>{% trans "Product English Description" %}{% if form.product_about_en.field.required %}*{% endif %}</label>
+                <label>Product English Description{% if form.product_about_en.field.required %}*{% endif %}</label>
                 {{form.product_about_en}}
             </div>
+            {% elif CURRENT_LANGUAGE == 'tr' %}
+            <div>
+                <label>Ürünün İngilizce Açıklaması{% if form.product_about_en.field.required %}*{% endif %}</label>
+                {{form.product_about_en}}
+            </div>
+            {% endif %}
         </div>
         <div class="row">
             <div>
@@ -180,7 +259,11 @@ Add Your Startup - Product Hunt Turkey
         {% endfor %}
         {% endif %}
         <div class="row">
-            <input type="submit" value="{% trans " Submit" %}">
+            {% if CURRENT_LANGUAGE == 'en' %}
+            <input type="submit" value="Submit">
+            {% elif CURRENT_LANGUAGE == 'tr' %}
+            <input type="submit" value="Gönder">
+            {% endif %}
         </div>
     </form>
 </div>

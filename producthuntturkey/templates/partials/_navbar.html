@@ -35,31 +35,71 @@
                         </a>
                     </li>
                     {% endif %}
+                    {% if CURRENT_LANGUAGE == 'en' %}
                     <li>
                         <a href="{% url 'show-event' %}" class="{% if '/events' in request.path %}active{% endif %}">
-                            {% trans "Events" %}
+                            Events
                         </a>
-                    </li> 
+                    </li>
+                    {% elif CURRENT_LANGUAGE == 'tr' %}
+                    <li>
+                        <a href="{% url 'show-event' %}" class="{% if '/events' in request.path %}active{% endif %}">
+                            Etkinlikler
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if CURRENT_LANGUAGE == 'en' %}
                     <li>
                         <a href="{% url 'ambassadors' %}" class="{% if '/ambassadors' in request.path %}active{% endif %}">
-                            {% trans "Ambassadors" %}
+                            Ambassadors
                         </a>
-                    </li> 
+                    </li>
+                    {% elif CURRENT_LANGUAGE == 'tr' %}
+                    <li>
+                        <a href="{% url 'ambassadors' %}" class="{% if '/ambassadors' in request.path %}active{% endif %}">
+                            Elçiler
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if CURRENT_LANGUAGE == 'en' %}
                     <li>
                         <a href="{% url 'what-is' %}" class="{% if '/what-is-product-hunt' in request.path %}active{% endif %}">
-                            {% trans "What is?" %}
+                            What is?
                         </a>
-                    </li>                                        
+                    </li>
+                    {% elif CURRENT_LANGUAGE == 'tr' %}
+                    <li>
+                        <a href="{% url 'what-is' %}" class="{% if '/what-is-product-hunt' in request.path %}active{% endif %}">
+                            Nedir?
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if CURRENT_LANGUAGE == 'en' %}
                     <li>
                         <a href="{% url 'open-startup' %}" class="{% if '/open-startup' in request.path %}active{% endif %}">
-                            {% trans "Open Startup" %}
+                            Open Startup
                         </a>
                     </li>
+                    {% elif CURRENT_LANGUAGE == 'tr' %}
+                    <li>
+                        <a href="{% url 'open-startup' %}" class="{% if '/open-startup' in request.path %}active{% endif %}">
+                            Açık Girişim
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if CURRENT_LANGUAGE == 'en' %}
                     <li>
                         <a href="{% url 'add-your-startup' %}" class="{% if '/add-your-startup' in request.path %}active{% endif %}">
-                            {% trans "Add Your Product" %}
+                            Add Your Product
                         </a>
                     </li>
+                    {% elif CURRENT_LANGUAGE == 'tr' %}
+                    <li>
+                        <a href="{% url 'add-your-startup' %}" class="{% if '/add-your-startup' in request.path %}active{% endif %}">
+                            Girişimini Ekle
+                        </a>
+                    </li>
+                    {% endif %}
                     {% for language in languages %}
                     {% if language.code != CURRENT_LANGUAGE %}
                     {% if language.code == 'en' %}

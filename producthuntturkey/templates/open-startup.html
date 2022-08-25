@@ -62,17 +62,41 @@ Açık Girişim - Product Hunt Turkey
 
 {% block content %}
 <div class="MetricContainer">
+
+    {% if CURRENT_LANGUAGE == 'en' %}
     <div class="Metric">
-        <h2 class="MetricTitle">{% trans "Number of Total Startups" %}</h2>
+        <h2 class="MetricTitle">Number of Total Startups</h2>
         <p class="MetricContent">{{products_number}}</p>
     </div>
+    {% elif CURRENT_LANGUAGE == 'tr' %}
     <div class="Metric">
-        <h2 class="MetricTitle">{% trans "Number of E-Mail Subscribers" %}</h2>
+        <h2 class="MetricTitle">Toplam Girişim Sayısı</h2>
+        <p class="MetricContent">{{products_number}}</p>
+    </div>
+    {% endif %}
+
+    {% if CURRENT_LANGUAGE == 'en' %}
+    <div class="Metric">
+        <h2 class="MetricTitle">Number of E-Mail Subscribers</h2>
         <p class="MetricContent">178</p>
     </div>
+    {% elif CURRENT_LANGUAGE == 'tr' %}
     <div class="Metric">
-        <h2 class="MetricTitle">{% trans "Number of Telegram Channel Subscribers" %}</h2>
+        <h2 class="MetricTitle">Toplam E-Mail Abonesi</h2>
+        <p class="MetricContent">178</p>
+    </div>
+    {% endif %}
+
+    {% if CURRENT_LANGUAGE == 'en' %}
+    <div class="Metric">
+        <h2 class="MetricTitle">Number of Telegram Channel Subscribers</h2>
         <p class="MetricContent">97</p>
     </div>
+    {% elif CURRENT_LANGUAGE == 'tr' %}
+    <div class="Metric">
+        <h2 class="MetricTitle">Telegram Kanalı Abone Sayısı</h2>
+        <p class="MetricContent">97</p>
+    </div>
+    {% endif %}
 </div>
 {% endblock content %}
