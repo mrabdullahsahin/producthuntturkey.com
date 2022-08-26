@@ -31,6 +31,10 @@
         width: 98%;
     }
 
+    section > a > figure > img {
+        max-width: 100%;
+    }
+
     .social-media__item:last-of-type {
         margin-right: 15px;
     }
